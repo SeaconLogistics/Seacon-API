@@ -42,7 +42,7 @@ This is used to interface with the Seacon Transport and Oversea shipments. With 
 
 File | Description
 -------- | -----------
-[shipment-message-65101.xsd](/sample_files/shipment/shipment-message-65101.xsd)| 
+[shipment-message-65101.xsd](/sample_files/shipment/shipment-message-65101.xsd)| Main Shipment message schema definition 
 [shipment-message-65101.xsd.html](/sample_files/shipment/shipment-message-65101.xsd.html)| XML Schema Documentation
 [shipment-elements-65101.xsd](/sample_files/shipment/shipment-elements-65101.xsd) |
 [shipment-elements-65101.xsd.html](/sample_files/shipment/shipment-elements-65101.xsd.html)| XML Schema Documentation
@@ -91,10 +91,10 @@ With every customer or supplier we will discuss what will be the most efficient 
 
 
 ## Contact information
-More information about EDI integrations you can contact:
-Seacon Logistics B.V.  - IT Department
-Mark Vromans 
-Manager IT & Engineering
-T: +31 7 327 5531
-M: +31 6 20 40 1290
-E: mvromans@seaconlogistics.com
+More information about EDI integrations you can contact:  
+Seacon Logistics B.V.  - IT Department  
+Mark Vromans   
+Manager IT & Engineering  
+T: +31 7 327 5531  
+M: +31 6 20 40 1290  
+E: mvromans@seaconlogistics.com  
