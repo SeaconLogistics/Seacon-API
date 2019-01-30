@@ -31,23 +31,6 @@ Seacon follows the following steps when connecting new Customers to our systems.
 1. after a successfull test the message may be sent to the Production servers.
 
 
-
-### Seacon Echo Service
-To test your connection to the Seacon ESB please POST a test file to the following URL.
-
-#### Production server:
-`http://webservice.seaconlogistics.com:9000/echo`
-
-#### Test server:
-`http://webservice.seaconlogistics.com:8000/echo`
-
-### Sample Commands
-
-`curl -X POST http://webservice.seaconlogistics.com:8000/echo`
-
-`curl -X POST -H "Content-Type: text/plain" --data "Hallo Seacon, dit is een test" http://webservice.seaconlogistics.com:8000/echo`
-
-
 ## Seacon Standards (to Seacon) 
 ### Shipment xml:
 This is used to interface with the Seacon Transport and Oversea shipments. With this interface (truck) transport, seafreight (im-and export) and airfreight orders can be booked. See attached xsd schemas and two example files.
@@ -97,6 +80,28 @@ This is used to interface (outgoing) with the Seacon WMS orders. With this inter
 
 ### Status out xml:
 This is used to interface (outgoing) with the Seacon system. With this interface tracking en tracing information and statuses of orders can be sent to other systems. See attached xsd schemas and two example files
+
+
+### Test information
+
+### Seacon Echo Service
+To test your connection to the Seacon ESB please POST a test file to the following URL.
+
+#### Production server:
+`http://webservice.seaconlogistics.com:9000/echo`
+
+#### Test server:
+`http://webservice.seaconlogistics.com:8000/echo`
+
+### Sample Commands
+
+`curl -X POST http://webservice.seaconlogistics.com:8000/echo`
+
+`curl -X POST -H "Content-Type: text/plain" --data "Hallo Seacon, dit is een test" http://webservice.seaconlogistics.com:8000/echo`
+
+
+
+
 
 ### More information:
 With every customer or supplier we will discuss what will be the most efficient way to connect the systems. It could be the usage of the “Seacon standard” files, but there are of course other options. We have a lot op options in connecting. 
