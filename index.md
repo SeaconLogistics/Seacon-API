@@ -24,10 +24,10 @@ It’s also possible to make use of the Seacon standard messages. These are desc
 To test your connection to the Seacon ESB please POST a test file to the following URL.
 
 #### Production server:
-http://webservice.seaconlogistics.com:9000/echo
+`http://webservice.seaconlogistics.com:9000/echo`
 
 #### Test server:
-http://webservice.seaconlogistics.com:8000/echo
+`http://webservice.seaconlogistics.com:8000/echo`
 
 ### Sample Commands
 
