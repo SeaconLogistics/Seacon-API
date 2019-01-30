@@ -1,37 +1,75 @@
-## Welcome to GitHub Pages
+## SEACON API Documentation
 
-You can use the [editor on GitHub](https://github.com/SeaconLogistics/Seacon-API/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Introduction
 
-### Markdown
+Seacon prefers to have direct system-integrations with its customers and suppliers. There are several options how we can do this. This document describes how the integration can be done and what formats are preferred by Seacon. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Integration	- Way of data transfer
 
-```markdown
-Syntax highlighted code block
+Seacon uses an ESB for integration systems with each other. In this ESB we can connect to systems in several ways. We can use most common communication types to get and send EDI data to and from our customers. (E.g.  ftp(s) / http(s) / soap / AS2 etc.).  
+Our preferred communication is over http(s). In this way we can have direct communications to the systems with reply if all is okay.  For setting this up we can provide the customer with an endpoint where they can post their messages to. We need some systems information to be able to whitelist the server that is posting (e.g. IP addresses) . 
+The options in how to integrate can be discussed with Seacon IT and the customer or supplier to see what will be the best way for that particular implementation. 
 
-# Header 1
-## Header 2
-### Header 3
+### EDI Messages
 
-- Bulleted
-- List
+Seacon can convert from and to several different EDI formats (E.g. EDIFACT / csv / fixed length / xml) . All implementations will require a pre-investigation of how the mapping to the Seacon system will be done and what information the customers or suppliers require.  The time needed for this depends on the complexity of the implementation.
+Seacon prefers to receive and sent xml files for these are the easiest to map to the Seacon standard. 
+It’s also possible to make use of the Seacon standard messages. These are described below.
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+## Seacon Standards (to Seacon) 
+### Shipment xml:
+This is used to interface with the Seacon Transport and Oversea shipments. With this interface (truck) transport, seafreight (im-and export) and airfreight orders can be booked. See attached xsd schemas and two example files.
+   
+  
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### CMS xml:
+ This is used to interface with the Seacon Warehousing orders. With this interface inbounds,  outbounds and mutations can be booked. See attached the xsd schemas and an example file.
 
-### Jekyll Themes
+     
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/SeaconLogistics/Seacon-API/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+
+### Article Masterdata:
+This is used to interface with the Seacon article masterdata. With this interface WMS articles can be created in the Seacon systems. See attached xsd schema and example files.
+
+
+
+
+
+### Status xml:
+This is used to update the Seacon files with tracking and tracing statuses. 
+
+
+
+
+
+## Seacon standards (from Seacon)
+
+### Shipment-out xml:
+This is used to interface (outgoing) with the Seacon Transport and Oversea shipments. With this interface (truck) transport, seafreight (im-and export) and airfreight orders or updated order can be sent to other systems.  See attached xsd schemas and two example files. 
+
+
+### CMS-out xml:
+This is used to interface (outgoing) with the Seacon WMS orders. With this interface warehouse informations about inbound, outbound an mutation orders can be sent to other systems .  See attached xsd schemas and two example files. 
+
+
+### Status out xml:
+This is used to interface (outgoing) with the Seacon system. With this interface tracking en tracing information and statuses of orders can be sent to other systems. See attached xsd schemas and two example files
+
+### More information:
+With every customer or supplier we will discuss what will be the most efficient way to connect the systems. It could be the usage of the “Seacon standard” files, but there are of course other options. We have a lot op options in connecting. 
+
+
+## Contact information
+More information about EDI integrations you can contact:
+Seacon Logistics B.V.  - IT Department
+Mark Vromans 
+Manager IT & Engineering
+T: +31 7 327 5531
+M: +31 6 20 40 1290
+E: mvromans@seaconlogistics.com
