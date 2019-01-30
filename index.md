@@ -25,12 +25,12 @@ This is used to interface with the Seacon Transport and Oversea shipments. With 
 
 File | Description
 -------- | -----------
-shipment-message-65101.xsd | 
-shipment-message-65101.xsd.html | 
-shipment-elements-65101.xsd |
-shipment-elements-65101.xsd.html | 
-[shipment-65101.xml](/sample_files/shipment/shipment-65101.xml) | Example File 1
-shipment-complete-65101.xml | Example File 2
+[shipment-message-65101.xsd](Seacon-API/sample_files/shipment/shipment-message-65101.xsd)| 
+[shipment-message-65101.xsd.html](Seacon-API/sample_files/shipment/shipment-message-65101.xsd.html)| 
+[shipment-elements-65101.xsd](Seacon-API/sample_files/shipment/shipment-elements-65101.xsd) |
+[shipment-elements-65101.xsd.html](Seacon-API/sample_files/shipment/shipment-elements-65101.xsd.html)| 
+[shipment-65101.xml](Seacon-API/sample_files/shipment/shipment-65101.xml) | Example File 1
+[shipment-complete-65101.xml](Seacon-API/sample_files/shipment/shipment-complete-65101.xml) | Example File 2
 
 
 ### CMS xml:
