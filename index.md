@@ -1,4 +1,4 @@
-![header](/images/header.jpg)
+![header](/images/header.jpeg)
 ## SEACON API Documentation
 #### v20170717
 
@@ -29,8 +29,7 @@ shipment-message-65101.xsd |
 shipment-message-65101.xsd.html | 
 shipment-elements-65101.xsd |
 shipment-elements-65101.xsd.html | 
-[shipment-65101.xml](Seacon-API/sample_files/shipment/shipment-65101.xml) | Example File 1
-shipment-65101.xml | Example File 1
+[shipment-65101.xml](/sample_files/shipment/shipment-65101.xml) | Example File 1
 shipment-complete-65101.xml | Example File 2
 
 
