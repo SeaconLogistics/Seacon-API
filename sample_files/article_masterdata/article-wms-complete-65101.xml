@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles xmlns="http://www.kewill.com/logistics/klmd/article-wms" type="tag">
+  <ediCustomerNumber>99999998</ediCustomerNumber>
+  <ediCustomerDepartment>Mw</ediCustomerDepartment>
+  <ediParm1>9</ediParm1>
+  <ediParm2/>
+  <ediParm3/>
+  <transmitter/>
+  <receiver/>
+  <ediReference>EDI reference</ediReference>
+  <referenceIndication>0</referenceIndication>
+  <ediFunction1>9</ediFunction1>
+  <ediCustomerSearchName>STANDAARD</ediCustomerSearchName>
+  <dateTimeZone>1970-01-01T01:00:00Z</dateTimeZone>
+  <article type="tag">
+    <articleCode>wms-example-article</articleCode>
+    <searchNameArticle>wmsexample</searchNameArticle>
+    <internalDescription>WMS Example Article</internalDescription>
+    <commodityCode>div</commodityCode>
+    <articleGroup>100</articleGroup>
+    <eanNumber>8713500010166</eanNumber>
+    <codeArticleSet>1</codeArticleSet>
+    <stockRegistration>
+      <codeStockLevel>0</codeStockLevel>
+      <codeLot>1</codeLot>
+      <codeAutomaticLotDate>1</codeAutomaticLotDate>
+      <codeSerialNumbers>0</codeSerialNumbers>
+    </stockRegistration>
+    <stockLevelControl>
+      <stockUnit>pc</stockUnit>
+      <receiptPackageCode>pl</receiptPackageCode>
+      <outboundUnit>pc</outboundUnit>
+      <despatchPackageCode>pl</despatchPackageCode>
+      <unitPackageCode1>pl</unitPackageCode1>
+      <unitPackageCode2>bx</unitPackageCode2>
+      <unitPackageCode3/>
+      <unitPackageCode4/>
+      <stacking>1</stacking>
+      <stackingPackageCode>pl</stackingPackageCode>
+      <stackingPalletUnit>false</stackingPalletUnit>
+      <volumePackageCode>bx</volumePackageCode>
+      <stackablePalletOutgoing>false</stackablePalletOutgoing>
+    </stockLevelControl>
+    <nettoWeight>1.000</nettoWeight>
+    <excise>
+      <exciseCode>WIJN</exciseCode>
+      <exciseSpecification>0</exciseSpecification>
+      <alcoholPercentage>12.50</alcoholPercentage>
+      <exciseLiters>1.000</exciseLiters>
+      <reportingCustomsCode>wms-example</reportingCustomsCode>
+      <displayValueInf>false</displayValueInf>
+      <methodOfValuation>0</methodOfValuation>
+    </excise>
+    <returnHandling>
+      <rmaHandling>1</rmaHandling>
+      <returnType>RETOUR</returnType>
+    </returnHandling>
+    <tailorFiller25>TailorFiller</tailorFiller25>
+    <dangerousGoods type="tag">
+      <dangerousGoodsUNNumber>1987</dangerousGoodsUNNumber>
+      <dangerousGoodsUNSuffix>10</dangerousGoodsUNSuffix>
+      <meltingFreezePoint/>
+      <boilingPoint>460 K</boilingPoint>
+      <endBoilingPoint/>
+      <explosionLimit/>
+      <lowerExplosionLimit/>
+      <flashPoint>-37</flashPoint>
+      <selfIgnitionTemperature/>
+      <vapourTension/>
+      <percentageNitrogen/>
+      <density>1.3565 g/cm3</density>
+      <viscosity/>
+      <waterSolubillity/>
+      <phValue>4.3 - 4.8</phValue>
+      <acidBaseNeutral>extr. acidic</acidBaseNeutral>
+      <odour>Odourless</odour>
+      <segregationSeparator/>
+      <msdsLastChecked>1970-01-01</msdsLastChecked>
+      <msdsVersion>1.0</msdsVersion>
+      <urlReferral>http://www.cdms.net/ldat/mp8CC000.pdf</urlReferral>
+      <urlLocal>http://www.cdms.net/ldat/mp8CC000.pdf</urlLocal>
+      <urlExtra>http://www.cdms.net/ldat/ld8CC010.pdf</urlExtra>
+      <technicalNames type="tag">
+        <isoLanguageCode>en</isoLanguageCode>
+        <technicalName>Techn Name UN 1001/7</technicalName>
+      </technicalNames>
+      <casNumbers type="tag">
+        <sequenceNumber>1</sequenceNumber>
+        <casNumber>7727-37-9</casNumber>
+        <percentOfArticle>100</percentOfArticle>
+      </casNumbers>
+      <codeLists type="tag">
+        <sequenceNumber>1</sequenceNumber>
+        <codeListType>H</codeListType>
+        <codeListCode>240</codeListCode>
+        <order>10</order>
+      </codeLists>
+    </dangerousGoods>
+    <branchSpecifics type="tag">
+      <branchCode>1</branchCode>
+      <minimumStock>0</minimumStock>
+      <maximumStock>0</maximumStock>
+      <sellingPrice>10.00</sellingPrice>
+      <lotReservation>true</lotReservation>
+      <palletReservation>true</palletReservation>
+      <finalPalletFull>false</finalPalletFull>
+      <replenishment>
+        <transferUnit>pl</transferUnit>
+        <minimumAmount>0</minimumAmount>
+        <minimumPercentage>0.00</minimumPercentage>
+        <quantityToTransfer>1</quantityToTransfer>
+        <packageCode>pl</packageCode>
+        <reversedPickPercenatage>0.00</reversedPickPercenatage>
+      </replenishment>
+      <despatchPackageCode>pl</despatchPackageCode>
+      <cycleCount>
+        <minimumQuantity>0</minimumQuantity>
+        <minimumValueOfStock>0.00</minimumValueOfStock>
+        <amountOfdays>0</amountOfdays>
+      </cycleCount>
+      <abcClassification>C</abcClassification>
+      <TMSArticle>false</TMSArticle>
+      <RFSwitchLot>false</RFSwitchLot>
+      <RFSwitchPallet>true</RFSwitchPallet>
+      <tailorFiller10>Tailor10</tailorFiller10>
+      <buyingSellingPrice type="tag">
+        <fromDate>2014-01-01</fromDate>
+        <packageCode>pc</packageCode>
+        <buyingPrice>1000.00</buyingPrice>
+        <buyingCurrency>USD</buyingCurrency>
+        <sellingPrice>1250</sellingPrice>
+        <sellingCurrency>EUR</sellingCurrency>
+      </buyingSellingPrice>
+    </branchSpecifics>
+    <descriptionPerLanguage type="tag">
+      <languageCode>1</languageCode>
+      <descriptionPart1>WMS voorbeeld artikel omschrij</descriptionPart1>
+      <descriptionPart2>ving in het Nederlands</descriptionPart2>
+      <descriptionPart3>descriptionPart3</descriptionPart3>
+      <descriptionPart4>descriptionPart4</descriptionPart4>
+    </descriptionPerLanguage>
+    <descriptionPerRelation type="tag">
+      <supplierDescription>
+        <supplierSearchName>STANDAARD</supplierSearchName>
+        <relationNumber>0</relationNumber>
+        <searchString/>
+      </supplierDescription>
+      <descriptionPart1>WMS voorbeeld artikel omschrij</descriptionPart1>
+      <descriptionPart2>ving in het Nederlands</descriptionPart2>
+      <descriptionPart3>descriptionPart3</descriptionPart3>
+      <descriptionPart4>descriptionPart4</descriptionPart4>
+    </descriptionPerRelation>
+    <eanCodes type="tag">
+      <supplierEanCode>
+        <supplierSearchName>STANDAARD</supplierSearchName>
+        <relationNumber>0</relationNumber>
+        <searchString/>
+      </supplierEanCode>
+      <packageCode>pc</packageCode>
+      <eanCode>8713500010166</eanCode>
+    </eanCodes>
+    <articleCharacteristic type="tag">
+      <characteristicsCode>2</characteristicsCode>
+      <orderType>0</orderType>
+      <operator>=</operator>
+      <value>2L</value>
+      <numberPositiveOrNegative>0</numberPositiveOrNegative>
+    </articleCharacteristic>
+    <packagePattern type="tag">
+      <packageCode>pc</packageCode>
+      <numberPerUnit>1</numberPerUnit>
+      <grossWeightPerUnit>1.110</grossWeightPerUnit>
+      <invoiceValue>12.50</invoiceValue>
+      <length>0</length>
+      <width>0</width>
+      <height>0</height>
+      <quantityPackageCode1>0</quantityPackageCode1>
+      <quantityPackageCode2>0</quantityPackageCode2>
+      <quantityPackageCode3>0</quantityPackageCode3>
+      <quantityPackageCode4>0</quantityPackageCode4>
+      <calculationPackageCode>pl</calculationPackageCode>
+      <palletRegistration>false</palletRegistration>
+    </packagePattern>
+    <billOfMaterial type="tag">
+      <information/>
+      <amendAtOrderEntry>true</amendAtOrderEntry>
+      <producePer>0</producePer>
+      <parts type="tag">
+        <partArticleCode/>
+        <requiredNumber>0</requiredNumber>
+        <information/>
+      </parts>
+    </billOfMaterial>
+    <customGoodsCode type="tag">
+      <countryCode>NL</countryCode>
+      <fromDate>2014-04-01</fromDate>
+      <importTaricCode>1905905500701100000000</importTaricCode>
+      <exportTaricCode>1905905500701100000000</exportTaricCode>
+      <supplierSpecific type="tag">
+        <supplierAntiDumping>
+          <supplierSearchName>STANDAARD</supplierSearchName>
+          <relationNumber>0</relationNumber>
+          <searchString/>
+        </supplierAntiDumping>
+        <countryOfOrigin>NL</countryOfOrigin>
+        <taricCode1>tar1</taricCode1>
+        <taricCode2>tar2</taricCode2>
+        <nationalSubDivCode>su</nationalSubDivCode>
+        <nationalExciseCode>ex</nationalExciseCode>
+        <typeOfAntiDump>D</typeOfAntiDump>
+      </supplierSpecific>
+    </customGoodsCode>
+  </article>
+</articles>

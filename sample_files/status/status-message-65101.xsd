@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.kewill.com/logistics/klic/status" elementFormDefault="qualified" targetNamespace="http://www.kewill.com/logistics/klic/status">
+  <xs:include schemaLocation="status-elements-65101.xsd"/>
+  <xs:element name="interchange" type="interchangeType"/>
+  <xs:complexType name="interchangeType">
+    <xs:sequence>
+      <xs:element name="syntaxIdentifier" type="syntaxIdentifierType" minOccurs="0"/>
+      <xs:element name="syntaxVersionNumber" type="syntaxVersionNumberType" minOccurs="0"/>
+      <xs:element name="senderIdentification" type="senderIdentificationType" minOccurs="0"/>
+      <xs:element name="senderIdCodeQualifier" type="senderIdCodeQualifierType" minOccurs="0"/>
+      <xs:element name="addressForReverseRouting" type="addressForReverseRoutingType" minOccurs="0"/>
+      <xs:element name="recipientIdentification" type="recipientIdentificationType" minOccurs="0"/>
+      <xs:element name="recipientIdCodeQualifier" type="recipientIdCodeQualifierType" minOccurs="0"/>
+      <xs:element name="routingAddress" type="routingAddressType" minOccurs="0"/>
+      <xs:element name="date" type="dateType" minOccurs="0"/>
+      <xs:element name="time" type="timeType" minOccurs="0"/>
+      <xs:element name="interchangeReference" type="interchangeReferenceType" minOccurs="0"/>
+      <xs:element name="recipientReferencepassword" type="recipientReferencepasswordType" minOccurs="0"/>
+      <xs:element name="recipientRefpasswordQuali" type="recipientRefpasswordQualiType" minOccurs="0"/>
+      <xs:element name="applicationReference" type="applicationReferenceType" minOccurs="0"/>
+      <xs:element name="processingPriorityCode" type="processingPriorityCodeType" minOccurs="0"/>
+      <xs:element name="acknowledgementRequest" type="acknowledgementRequestType" minOccurs="0"/>
+      <xs:element name="communicationsAgreementId" type="communicationsAgreementIdType" minOccurs="0"/>
+      <xs:element name="testIndicator" type="testIndicatorType" minOccurs="0"/>
+      <xs:element name="message" type="messageType" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="messageType">
+    <xs:sequence>
+      <xs:element name="messageReferenceNumber" type="messageReferenceNumberType" minOccurs="0"/>
+      <xs:element name="messageType" type="messageTypeType" minOccurs="0"/>
+      <xs:element name="messageVersionNumber" type="messageVersionNumberType" minOccurs="0"/>
+      <xs:element name="messageReleaseNumber" type="messageReleaseNumberType" minOccurs="0"/>
+      <xs:element name="controllingAgency" type="controllingAgencyType" minOccurs="0"/>
+      <xs:element name="associationAssignedCode" type="associationAssignedCodeType" minOccurs="0"/>
+      <xs:element name="commonAccessReference" type="commonAccessReferenceType" minOccurs="0"/>
+      <xs:element name="sequenceOfTransfers" type="sequenceOfTransfersType" minOccurs="0"/>
+      <xs:element name="firstAndLastTransfer" type="firstAndLastTransferType" minOccurs="0"/>
+      <xs:element name="status" type="statusType"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="statusType">
+    <xs:sequence>
+      <xs:element name="ediCustomerNumber" type="ediCustomerNumberType" minOccurs="0"/>
+      <xs:element name="ediCustomerDepartment" type="ediCustomerDepartmentType" minOccurs="0"/>
+      <xs:element name="ediParm1" type="ediParm1Type" minOccurs="0"/>
+      <xs:element name="ediParm2" type="ediParm2Type" minOccurs="0"/>
+      <xs:element name="ediParm3" type="ediParm3Type" minOccurs="0"/>
+      <xs:element name="transmitter" type="transmitterType" minOccurs="0"/>
+      <xs:element name="receiver" type="receiverType" minOccurs="0"/>
+      <xs:element name="ediReference" type="ediReferenceType"/>
+      <xs:element name="referenceIndication" type="referenceIndicationType" minOccurs="0"/>
+      <xs:element name="internalNumber" type="internalNumberType" minOccurs="0"/>
+      <xs:element name="ediFunction1" type="ediFunction1Type"/>
+      <xs:element name="ediCustomerSearchName" type="ediCustomerSearchNameType" minOccurs="0"/>
+      <xs:element name="employeesInitials" type="employeesInitialsType" minOccurs="0"/>
+      <xs:element name="dateTimeZone" type="dateTimeType" minOccurs="0"/>
+      <xs:element name="fileHeader" type="fileHeaderType"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="fileHeaderType">
+    <xs:sequence>
+      <xs:element name="trackingAndTracing" type="trackingAndTracingType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="tailorMade" type="tailorMadeType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="trackingAndTracingType">
+    <xs:sequence>
+      <xs:element name="dateTimeZone" type="dateTimeType" minOccurs="0"/>
+      <xs:element name="destinationCode" type="destinationCodeType" minOccurs="0"/>
+      <xs:element name="code" type="codeType" minOccurs="0"/>
+      <xs:element name="remark_1" type="remark_1Type" minOccurs="0"/>
+      <xs:element name="remark_2" type="remark_2Type" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="tailorMadeType">
+    <xs:sequence>
+      <xs:element name="tailorCode" type="tailorCodeType" minOccurs="0"/>
+      <xs:element name="value" type="ST_valueA100" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:element name="status" type="statusType"/>
+</xs:schema>

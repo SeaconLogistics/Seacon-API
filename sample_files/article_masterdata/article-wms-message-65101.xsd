@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.kewill.com/logistics/klmd/article-wms" elementFormDefault="qualified" targetNamespace="http://www.kewill.com/logistics/klmd/article-wms">
+  <xs:include schemaLocation="article-wms-elements-65101.xsd"/>
+  <xs:element name="articles" type="articlesType"/>
+  <xs:complexType name="articlesType">
+    <xs:sequence>
+      <xs:element name="ediCustomerNumber" type="ediCustomerNumberType" minOccurs="0"/>
+      <xs:element name="ediCustomerDepartment" type="ediCustomerDepartmentType" minOccurs="0"/>
+      <xs:element name="ediParm1" type="ediParm1Type" minOccurs="0"/>
+      <xs:element name="ediParm2" type="ediParm2Type" minOccurs="0"/>
+      <xs:element name="ediParm3" type="ediParm3Type" minOccurs="0"/>
+      <xs:element name="transmitter" type="transmitterType" minOccurs="0"/>
+      <xs:element name="receiver" type="receiverType" minOccurs="0"/>
+      <xs:element name="ediReference" type="ediReferenceType"/>
+      <xs:element name="referenceIndication" type="referenceIndicationType" minOccurs="0"/>
+      <xs:element name="ediFunction1" type="ediFunction1Type"/>
+      <xs:element name="ediCustomerSearchName" type="ediCustomerSearchNameType" minOccurs="0"/>
+      <xs:element name="dateTimeZone" type="dateTimeType" minOccurs="0"/>
+      <xs:element name="article" type="articleType" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="articleType">
+    <xs:sequence>
+      <xs:element name="articleCode" type="articleCodeType"/>
+      <xs:element name="searchNameArticle" type="searchNameArticleType" minOccurs="0"/>
+      <xs:element name="internalDescription" type="internalDescriptionType" minOccurs="0"/>
+      <xs:element name="commodityCode" type="commodityCodeType" minOccurs="0"/>
+      <xs:element name="articleGroup" type="articleGroupType" minOccurs="0"/>
+      <xs:element name="eanNumber" type="eanNumberType" minOccurs="0"/>
+      <xs:element name="codeArticleSet" type="codeArticleSetType" minOccurs="0"/>
+      <xs:element name="stockRegistration" type="stockRegistrationType" minOccurs="0"/>
+      <xs:element name="stockLevelControl" type="stockLevelControlType" minOccurs="0"/>
+      <xs:element name="nettoWeight" type="nettoWeightType" minOccurs="0"/>
+      <xs:element name="excise" type="exciseType" minOccurs="0"/>
+      <xs:element name="returnHandling" type="returnHandlingType" minOccurs="0"/>
+      <xs:element name="tailorFiller25" type="tailorFiller25Type" minOccurs="0"/>
+      <xs:element name="dangerousGoods" type="dangerousGoodsType" minOccurs="0"/>
+      <xs:element name="branchSpecifics" type="branchSpecificsType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="descriptionPerLanguage" type="descriptionPerLanguageType" minOccurs="0" maxOccurs="99"/>
+      <xs:element name="descriptionPerRelation" type="descriptionPerRelationType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="eanCodes" type="eanCodesType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="articleCharacteristic" type="articleCharacteristicType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="packagePattern" type="packagePatternType" minOccurs="0" maxOccurs="5"/>
+      <xs:element name="billOfMaterial" type="billOfMaterialType" minOccurs="0"/>
+      <xs:element name="customGoodsCode" type="customGoodsCodeType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="dangerousGoodsType">
+    <xs:sequence>
+      <xs:element name="dangerousGoodsUNNumber" type="dangerousGoodsUNNumberType" minOccurs="0"/>
+      <xs:element name="dangerousGoodsUNSuffix" type="dangerousGoodsUNSuffixType" minOccurs="0"/>
+      <xs:element name="meltingFreezePoint" type="meltingFreezePointType" minOccurs="0"/>
+      <xs:element name="boilingPoint" type="boilingPointType" minOccurs="0"/>
+      <xs:element name="endBoilingPoint" type="endBoilingPointType" minOccurs="0"/>
+      <xs:element name="explosionLimit" type="explosionLimitType" minOccurs="0"/>
+      <xs:element name="lowerExplosionLimit" type="lowerExplosionLimitType" minOccurs="0"/>
+      <xs:element name="flashPoint" type="flashPointType" minOccurs="0"/>
+      <xs:element name="selfIgnitionTemperature" type="selfIgnitionTemperatureType" minOccurs="0"/>
+      <xs:element name="vapourTension" type="vapourTensionType" minOccurs="0"/>
+      <xs:element name="percentageNitrogen" type="percentageNitrogenType" minOccurs="0"/>
+      <xs:element name="density" type="densityType" minOccurs="0"/>
+      <xs:element name="viscosity" type="viscosityType" minOccurs="0"/>
+      <xs:element name="waterSolubillity" type="waterSolubillityType" minOccurs="0"/>
+      <xs:element name="phValue" type="phValueType" minOccurs="0"/>
+      <xs:element name="acidBaseNeutral" type="acidBaseNeutralType" minOccurs="0"/>
+      <xs:element name="odour" type="odourType" minOccurs="0"/>
+      <xs:element name="segregationSeparator" type="segregationSeparatorType" minOccurs="0"/>
+      <xs:element name="msdsLastChecked" type="msdsLastCheckedType" minOccurs="0"/>
+      <xs:element name="msdsVersion" type="msdsVersionType" minOccurs="0"/>
+      <xs:element name="urlReferral" type="urlReferralType" minOccurs="0"/>
+      <xs:element name="urlLocal" type="urlLocalType" minOccurs="0"/>
+      <xs:element name="urlExtra" type="urlExtraType" minOccurs="0"/>
+      <xs:element name="technicalNames" type="technicalNamesType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="casNumbers" type="casNumbersType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="codeLists" type="codeListsType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="technicalNamesType">
+    <xs:sequence>
+      <xs:element name="isoLanguageCode" type="isoLanguageCodeType" minOccurs="0"/>
+      <xs:element name="technicalName" type="technicalNameType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="casNumbersType">
+    <xs:sequence>
+      <xs:element name="sequenceNumber" type="sequenceNumberType"/>
+      <xs:element name="casNumber" type="casNumberType"/>
+      <xs:element name="percentOfArticle" type="percentOfArticleType"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="codeListsType">
+    <xs:sequence>
+      <xs:element name="sequenceNumber" type="sequenceNumberType"/>
+      <xs:element name="codeListType" type="codeListTypeType"/>
+      <xs:element name="codeListCode" type="codeListCodeType"/>
+      <xs:element name="order" type="orderType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="branchSpecificsType">
+    <xs:sequence>
+      <xs:element name="branchCode" type="branchCodeType"/>
+      <xs:element name="minimumStock" type="minimumStockType" minOccurs="0"/>
+      <xs:element name="maximumStock" type="maximumStockType" minOccurs="0"/>
+      <xs:element name="sellingPrice" type="sellingPriceType" minOccurs="0"/>
+      <xs:element name="lotReservation" type="lotReservationType" minOccurs="0"/>
+      <xs:element name="palletReservation" type="palletReservationType" minOccurs="0"/>
+      <xs:element name="finalPalletFull" type="finalPalletFullType" minOccurs="0"/>
+      <xs:element name="replenishment" type="replenishmentType" minOccurs="0"/>
+      <xs:element name="despatchPackageCode" type="despatchPackageCodeType" minOccurs="0"/>
+      <xs:element name="cycleCount" type="cycleCountType" minOccurs="0"/>
+      <xs:element name="abcClassification" type="abcClassificationType" minOccurs="0"/>
+      <xs:element name="TMSArticle" type="TMSArticleType" minOccurs="0"/>
+      <xs:element name="RFSwitchLot" type="RFSwitchLotType" minOccurs="0"/>
+      <xs:element name="RFSwitchPallet" type="RFSwitchPalletType" minOccurs="0"/>
+      <xs:element name="tailorFiller10" type="tailorFiller10Type" minOccurs="0"/>
+      <xs:element name="buyingSellingPrice" type="buyingSellingPriceType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="buyingSellingPriceType">
+    <xs:sequence>
+      <xs:element name="fromDate" type="fromDateType" minOccurs="0"/>
+      <xs:element name="packageCode" type="packageCodeType" minOccurs="0"/>
+      <xs:element name="buyingPrice" type="buyingPriceType" minOccurs="0"/>
+      <xs:element name="buyingCurrency" type="buyingCurrencyType" minOccurs="0"/>
+      <xs:element name="sellingPrice" type="sellingPriceType" minOccurs="0"/>
+      <xs:element name="sellingCurrency" type="sellingCurrencyType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="descriptionPerLanguageType">
+    <xs:sequence>
+      <xs:element name="languageCode" type="languageCodeType"/>
+      <xs:element name="descriptionPart1" type="descriptionPart1Type" minOccurs="0"/>
+      <xs:element name="descriptionPart2" type="descriptionPart2Type" minOccurs="0"/>
+      <xs:element name="descriptionPart3" type="descriptionPart3Type" minOccurs="0"/>
+      <xs:element name="descriptionPart4" type="descriptionPart4Type" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="descriptionPerRelationType">
+    <xs:sequence>
+      <xs:element name="supplierDescription" type="supplierDescriptionType" minOccurs="0"/>
+      <xs:element name="descriptionPart1" type="descriptionPart1Type" minOccurs="0"/>
+      <xs:element name="descriptionPart2" type="descriptionPart2Type" minOccurs="0"/>
+      <xs:element name="descriptionPart3" type="descriptionPart3Type" minOccurs="0"/>
+      <xs:element name="descriptionPart4" type="descriptionPart4Type" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="eanCodesType">
+    <xs:sequence>
+      <xs:element name="supplierEanCode" type="supplierEanCodeType" minOccurs="0"/>
+      <xs:element name="packageCode" type="packageCodeType"/>
+      <xs:element name="eanCode" type="eanCodeType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="articleCharacteristicType">
+    <xs:sequence>
+      <xs:element name="characteristicsCode" type="characteristicsCodeType"/>
+      <xs:element name="orderType" type="orderTypeType" minOccurs="0"/>
+      <xs:element name="operator" type="operatorType" minOccurs="0"/>
+      <xs:element name="value" type="valueType" minOccurs="0"/>
+      <xs:element name="numberPositiveOrNegative" type="numberPositiveOrNegativeType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="packagePatternType">
+    <xs:sequence>
+      <xs:element name="packageCode" type="packageCodeType"/>
+      <xs:element name="numberPerUnit" type="numberPerUnitType" minOccurs="0"/>
+      <xs:element name="grossWeightPerUnit" type="grossWeightPerUnitType" minOccurs="0"/>
+      <xs:element name="invoiceValue" type="invoiceValueType" minOccurs="0"/>
+      <xs:element name="length" type="lengthType" minOccurs="0"/>
+      <xs:element name="width" type="widthType" minOccurs="0"/>
+      <xs:element name="height" type="heightType" minOccurs="0"/>
+      <xs:element name="quantityPackageCode1" type="quantityPackageCode1Type" minOccurs="0"/>
+      <xs:element name="quantityPackageCode2" type="quantityPackageCode2Type" minOccurs="0"/>
+      <xs:element name="quantityPackageCode3" type="quantityPackageCode3Type" minOccurs="0"/>
+      <xs:element name="quantityPackageCode4" type="quantityPackageCode4Type" minOccurs="0"/>
+      <xs:element name="calculationPackageCode" type="calculationPackageCodeType" minOccurs="0"/>
+      <xs:element name="palletRegistration" type="palletRegistrationType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="billOfMaterialType">
+    <xs:sequence>
+      <xs:element name="information" type="informationType" minOccurs="0"/>
+      <xs:element name="amendAtOrderEntry" type="amendAtOrderEntryType" minOccurs="0"/>
+      <xs:element name="producePer" type="producePerType" minOccurs="0"/>
+      <xs:element name="parts" type="partsType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="partsType">
+    <xs:sequence>
+      <xs:element name="partArticleCode" type="partArticleCodeType" minOccurs="0"/>
+      <xs:element name="requiredNumber" type="requiredNumberType" minOccurs="0"/>
+      <xs:element name="information" type="informationType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="customGoodsCodeType">
+    <xs:sequence>
+      <xs:element name="countryCode" type="countryCodeType"/>
+      <xs:element name="fromDate" type="fromDateType" minOccurs="0"/>
+      <xs:element name="importTaricCode" type="importTaricCodeType" minOccurs="0"/>
+      <xs:element name="exportTaricCode" type="exportTaricCodeType" minOccurs="0"/>
+      <xs:element name="supplierSpecific" type="supplierSpecificType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="supplierSpecificType">
+    <xs:sequence>
+      <xs:element name="supplierAntiDumping" type="supplierAntiDumpingType"/>
+      <xs:element name="countryOfOrigin" type="countryOfOriginType"/>
+      <xs:element name="taricCode1" type="taricCode1Type" minOccurs="0"/>
+      <xs:element name="taricCode2" type="taricCode2Type" minOccurs="0"/>
+      <xs:element name="nationalSubDivCode" type="nationalSubDivCodeType" minOccurs="0"/>
+      <xs:element name="nationalExciseCode" type="nationalExciseCodeType" minOccurs="0"/>
+      <xs:element name="typeOfAntiDump" type="typeOfAntiDumpType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="stockRegistrationType">
+    <xs:sequence>
+      <xs:element name="codeStockLevel" type="codeStockLevelType" minOccurs="0"/>
+      <xs:element name="codeLot" type="codeLotType" minOccurs="0"/>
+      <xs:element name="codeAutomaticLotDate" type="codeAutomaticLotDateType" minOccurs="0"/>
+      <xs:element name="codeSerialNumbers" type="codeSerialNumbersType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="stockLevelControlType">
+    <xs:sequence>
+      <xs:element name="stockUnit" type="stockUnitType" minOccurs="0"/>
+      <xs:element name="receiptPackageCode" type="receiptPackageCodeType" minOccurs="0"/>
+      <xs:element name="outboundUnit" type="outboundUnitType" minOccurs="0"/>
+      <xs:element name="despatchPackageCode" type="despatchPackageCodeType" minOccurs="0"/>
+      <xs:element name="unitPackageCode1" type="unitPackageCode1Type" minOccurs="0"/>
+      <xs:element name="unitPackageCode2" type="unitPackageCode2Type" minOccurs="0"/>
+      <xs:element name="unitPackageCode3" type="unitPackageCode3Type" minOccurs="0"/>
+      <xs:element name="unitPackageCode4" type="unitPackageCode4Type" minOccurs="0"/>
+      <xs:element name="stacking" type="stackingType" minOccurs="0"/>
+      <xs:element name="stackingPackageCode" type="stackingPackageCodeType" minOccurs="0"/>
+      <xs:element name="stackingPalletUnit" type="stackingPalletUnitType" minOccurs="0"/>
+      <xs:element name="volumePackageCode" type="volumePackageCodeType" minOccurs="0"/>
+      <xs:element name="stackablePalletOutgoing" type="stackablePalletOutgoingType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="exciseType">
+    <xs:sequence>
+      <xs:element name="exciseCode" type="exciseCodeType" minOccurs="0"/>
+      <xs:element name="exciseSpecification" type="exciseSpecificationType" minOccurs="0"/>
+      <xs:element name="alcoholPercentage" type="alcoholPercentageType" minOccurs="0"/>
+      <xs:element name="exciseLiters" type="exciseLitersType" minOccurs="0"/>
+      <xs:element name="reportingCustomsCode" type="reportingCustomsCodeType" minOccurs="0"/>
+      <xs:element name="displayValueInf" type="displayValueInfType" minOccurs="0"/>
+      <xs:element name="methodOfValuation" type="methodOfValuationType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="returnHandlingType">
+    <xs:sequence>
+      <xs:element name="rmaHandling" type="rmaHandlingType" minOccurs="0"/>
+      <xs:element name="returnType" type="returnTypeType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="replenishmentType">
+    <xs:sequence>
+      <xs:element name="transferUnit" type="transferUnitType" minOccurs="0"/>
+      <xs:element name="minimumAmount" type="minimumAmountType" minOccurs="0"/>
+      <xs:element name="minimumPercentage" type="minimumPercentageType" minOccurs="0"/>
+      <xs:element name="quantityToTransfer" type="quantityToTransferType" minOccurs="0"/>
+      <xs:element name="packageCode" type="packageCodeType" minOccurs="0"/>
+      <xs:element name="reversedPickPercenatage" type="reversedPickPercenatageType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cycleCountType">
+    <xs:sequence>
+      <xs:element name="minimumQuantity" type="minimumQuantityType" minOccurs="0"/>
+      <xs:element name="minimumValueOfStock" type="minimumValueOfStockType" minOccurs="0"/>
+      <xs:element name="amountOfdays" type="amountOfdaysType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="supplierDescriptionType">
+    <xs:sequence>
+      <xs:element name="supplierSearchName" type="supplierSearchNameType" minOccurs="0"/>
+      <xs:element name="relationNumber" type="relationNumberType" minOccurs="0"/>
+      <xs:element name="searchString" type="searchStringType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="supplierEanCodeType">
+    <xs:sequence>
+      <xs:element name="supplierSearchName" type="supplierSearchNameType" minOccurs="0"/>
+      <xs:element name="relationNumber" type="relationNumberType" minOccurs="0"/>
+      <xs:element name="searchString" type="searchStringType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="supplierAntiDumpingType">
+    <xs:sequence>
+      <xs:element name="supplierSearchName" type="supplierSearchNameType" minOccurs="0"/>
+      <xs:element name="relationNumber" type="relationNumberType" minOccurs="0"/>
+      <xs:element name="searchString" type="searchStringType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

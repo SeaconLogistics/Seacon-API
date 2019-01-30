@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<status xmlns="http://www.kewill.com/logistics/klic/status" type="tag">
+  <ediCustomerNumber>99999998</ediCustomerNumber>
+  <ediParm1>4</ediParm1>
+  <ediParm2>s</ediParm2>
+  <ediParm3>d</ediParm3>
+  <ediReference>EDI reference</ediReference>
+  <referenceIndication>0</referenceIndication>
+  <internalNumber>0</internalNumber>
+  <ediFunction1>2</ediFunction1>
+  <dateTimeZone>1970-01-01T01:00:00Z</dateTimeZone>
+  <fileHeader type="tag">
+    <trackingAndTracing type="tag">
+      <dateTimeZone>1970-01-01T01:00:00Z</dateTimeZone>
+      <code>EDIRECEIV</code>
+    </trackingAndTracing>
+    <tailorMade type="tag"/>
+  </fileHeader>
+</status>

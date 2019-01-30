@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.kewill.com/logistics/klmd/article-wms" elementFormDefault="qualified" targetNamespace="http://www.kewill.com/logistics/klmd/article-wms">
+  <xs:annotation>
+    <xs:documentation>Base type and element specifications</xs:documentation>
+  </xs:annotation>
+  <xs:simpleType name="NType">
+    <xs:annotation>
+      <xs:documentation>Non-negative integer value (no fractional digits).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:nonNegativeInteger"/>
+  </xs:simpleType>
+  <xs:simpleType name="AType">
+    <xs:annotation>
+      <xs:documentation>Character string value without control characters.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(\P{Cc})*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DTType">
+    <xs:annotation>
+      <xs:documentation>Date value specified in the following form "YYYY-MM-DDThh:mm:ss".</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+  <xs:simpleType name="stringType">
+    <xs:annotation>
+      <xs:documentation>Character string value</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="booleanType">
+    <xs:annotation>
+      <xs:documentation>Boolean type to specify a true or false value.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:boolean"/>
+  </xs:simpleType>
+  <xs:simpleType name="booleanKlType">
+    <xs:annotation>
+      <xs:documentation>Kewill specific boolean type using ^ as true and ` as false.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\^`]"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CAType">
+    <xs:annotation>
+      <xs:documentation>Boolean type to specify a true or false value</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="booleanType booleanKlType"/>
+  </xs:simpleType>
+  <xs:simpleType name="N4Type">
+    <xs:annotation>
+      <xs:documentation>Non-negative decimal value (maximum number of fractional digits 4).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:decimal">
+      <xs:fractionDigits value="4"/>
+      <xs:minInclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AUType">
+    <xs:annotation>
+      <xs:documentation>Character string value (uppercase) without control characters.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="AType">
+      <xs:pattern value="([^a-z])*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="N2Type">
+    <xs:annotation>
+      <xs:documentation>Non-negative decimal value (maximum number of fractional digits 2).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:decimal">
+      <xs:fractionDigits value="2"/>
+      <xs:minInclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="S3Type">
+    <xs:annotation>
+      <xs:documentation>Decimal value (maximum number of fractional digits 3).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:decimal">
+      <xs:fractionDigits value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DYType">
+    <xs:annotation>
+      <xs:documentation>Date value specified in the following form "YYYY-MM-DD".</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:date"/>
+  </xs:simpleType>
+  <xs:simpleType name="S2Type">
+    <xs:annotation>
+      <xs:documentation>Decimal value (maximum number of fractional digits 2).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:decimal">
+      <xs:fractionDigits value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UTType">
+    <xs:annotation>
+      <xs:documentation>Character string value.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="SType">
+    <xs:annotation>
+      <xs:documentation>Integer value (no fractional digits).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+  <xs:simpleType name="N3Type">
+    <xs:annotation>
+      <xs:documentation>Non-negative decimal value (maximum number of fractional digits 3).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:decimal">
+      <xs:fractionDigits value="3"/>
+      <xs:minInclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ediCustomerNumberType">
+    <xs:annotation>
+      <xs:documentation>The edi settings are located,combined with the other ediParm values, with this number.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="999999999999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ediCustomerDepartmentType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ediParm1Type">
+    <xs:annotation>
+      <xs:documentation>This controls, in combination with ediParm2 and ediParm3, the processing of a file. With these settings Kewill Logistics can determine departments/defaults etc.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="9"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ediParm2Type">
+    <xs:restriction base="AType">
+      <xs:maxLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ediParm3Type">
+    <xs:restriction base="AType">
+      <xs:maxLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="transmitterType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="35"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="receiverType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="35"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ediReferenceType">
+    <xs:annotation>
+      <xs:documentation>This is used to identify edi files.It is used when updates/ delete/ add is send of a previous transmission.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="AType">
+      <xs:maxLength value="35"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="referenceIndicationType">
+    <xs:annotation>
+      <xs:documentation>Indication of the reference which is refered to when using the ediReference field. not set or set with 0  the ediReference is an external EDI reference set with 1  the ediReference points is the con note number set with 9  the ediReference points to a message reference</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NType">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="9"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ediFunction1Type">
+    <xs:restriction base="AType">
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ediCustomerSearchNameType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="dateTimeType">
+    <xs:annotation>
+      <xs:documentation>This is the actual date/time/zone value.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="DTType"/>
+  </xs:simpleType>
+  <xs:simpleType name="articleCodeType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="35"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="searchNameArticleType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="internalDescriptionType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="commodityCodeType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="articleGroupType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="9999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="eanNumberType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="9999999999999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="codeArticleSetType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="9"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="codeStockLevelType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="9"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="codeLotType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="9"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="codeAutomaticLotDateType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="9"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="codeSerialNumbersType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="9"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="stockUnitType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="receiptPackageCodeType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="outboundUnitType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="despatchPackageCodeType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="unitPackageCode1Type">
+    <xs:restriction base="AType">
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="unitPackageCode2Type">
+    <xs:restriction base="AType">
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="unitPackageCode3Type">
+    <xs:restriction base="AType">
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="unitPackageCode4Type">
+    <xs:restriction base="AType">
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="stackingType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="9"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="stackingPackageCodeType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="stackingPalletUnitType">
+    <xs:restriction base="CAType"/>
+  </xs:simpleType>
+  <xs:simpleType name="volumePackageCodeType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="stackablePalletOutgoingType">
+    <xs:restriction base="CAType"/>
+  </xs:simpleType>
+  <xs:simpleType name="nettoWeightType">
+    <xs:restriction base="N4Type">
+      <xs:maxInclusive value="999999.9999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="exciseCodeType">
+    <xs:restriction base="AUType">
+      <xs:maxLength value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="exciseSpecificationType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="9"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="alcoholPercentageType">
+    <xs:restriction base="N2Type">
+      <xs:maxInclusive value="999.99"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="exciseLitersType">
+    <xs:restriction base="S3Type">
+      <xs:minInclusive value="-9999999999.999"/>
+      <xs:maxInclusive value="9999999999.999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="reportingCustomsCodeType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="16"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="displayValueInfType">
+    <xs:restriction base="CAType"/>
+  </xs:simpleType>
+  <xs:simpleType name="methodOfValuationType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="9"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="rmaHandlingType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="9"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="returnTypeType">
+    <xs:restriction base="AUType">
+      <xs:maxLength value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tailorFiller25Type">
+    <xs:restriction base="AType">
+      <xs:maxLength value="25"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="dangerousGoodsUNNumberType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="9999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="dangerousGoodsUNSuffixType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="meltingFreezePointType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="boilingPointType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="endBoilingPointType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="explosionLimitType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="7"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="lowerExplosionLimitType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="flashPointType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="selfIgnitionTemperatureType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="7"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="vapourTensionType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="percentageNitrogenType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="densityType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="viscosityType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="waterSolubillityType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="9"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="phValueType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="acidBaseNeutralType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="odourType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="25"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="segregationSeparatorType">
+    <xs:restriction base="AUType">
+      <xs:maxLength value="5"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="msdsLastCheckedType">
+    <xs:restriction base="DYType"/>
+  </xs:simpleType>
+  <xs:simpleType name="msdsVersionType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="urlReferralType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="urlLocalType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="urlExtraType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="isoLanguageCodeType">
+    <xs:annotation>
+      <xs:documentation>Language codes based on ISO list 639-1</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="AType">
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="technicalNameType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="200"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="sequenceNumberType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="casNumberType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="percentOfArticleType">
+    <xs:restriction base="S3Type">
+      <xs:minInclusive value="-999.999"/>
+      <xs:maxInclusive value="999.999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="codeListTypeType">
+    <xs:restriction base="AUType">
+      <xs:maxLength value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="codeListCodeType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="orderType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="branchCodeType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="9999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="minimumStockType">
+    <xs:restriction base="S3Type">
+      <xs:minInclusive value="-999999999.999"/>
+      <xs:maxInclusive value="999999999.999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="maximumStockType">
+    <xs:restriction base="S3Type">
+      <xs:minInclusive value="-999999999.999"/>
+      <xs:maxInclusive value="999999999.999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="sellingPriceType">
+    <xs:restriction base="S2Type">
+      <xs:minInclusive value="-999999999.99"/>
+      <xs:maxInclusive value="999999999.99"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="lotReservationType">
+    <xs:restriction base="CAType"/>
+  </xs:simpleType>
+  <xs:simpleType name="palletReservationType">
+    <xs:restriction base="CAType"/>
+  </xs:simpleType>
+  <xs:simpleType name="finalPalletFullType">
+    <xs:restriction base="CAType"/>
+  </xs:simpleType>
+  <xs:simpleType name="transferUnitType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="minimumAmountType">
+    <xs:restriction base="S3Type">
+      <xs:minInclusive value="-999999999.999"/>
+      <xs:maxInclusive value="999999999.999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="minimumPercentageType">
+    <xs:restriction base="N2Type">
+      <xs:maxInclusive value="999.99"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="quantityToTransferType">
+    <xs:restriction base="S3Type">
+      <xs:minInclusive value="-999999999.999"/>
+      <xs:maxInclusive value="999999999.999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="packageCodeType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="reversedPickPercenatageType">
+    <xs:restriction base="N2Type">
+      <xs:maxInclusive value="999.99"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="minimumQuantityType">
+    <xs:restriction base="S3Type">
+      <xs:minInclusive value="-999999999.999"/>
+      <xs:maxInclusive value="999999999.999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="minimumValueOfStockType">
+    <xs:restriction base="S3Type">
+      <xs:minInclusive value="-999999999.999"/>
+      <xs:maxInclusive value="999999999.999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="amountOfdaysType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="abcClassificationType">
+    <xs:restriction base="AUType">
+      <xs:maxLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TMSArticleType">
+    <xs:restriction base="CAType"/>
+  </xs:simpleType>
+  <xs:simpleType name="RFSwitchLotType">
+    <xs:restriction base="CAType"/>
+  </xs:simpleType>
+  <xs:simpleType name="RFSwitchPalletType">
+    <xs:restriction base="CAType"/>
+  </xs:simpleType>
+  <xs:simpleType name="tailorFiller10Type">
+    <xs:restriction base="AType">
+      <xs:maxLength value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="fromDateType">
+    <xs:restriction base="DYType"/>
+  </xs:simpleType>
+  <xs:simpleType name="buyingPriceType">
+    <xs:restriction base="N2Type">
+      <xs:maxInclusive value="9999999999999.99"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="buyingCurrencyType">
+    <xs:restriction base="AUType">
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="sellingCurrencyType">
+    <xs:restriction base="AUType">
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="languageCodeType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="99"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="descriptionPart1Type">
+    <xs:restriction base="AType">
+      <xs:maxLength value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="descriptionPart2Type">
+    <xs:restriction base="AType">
+      <xs:maxLength value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="descriptionPart3Type">
+    <xs:restriction base="AType">
+      <xs:maxLength value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="descriptionPart4Type">
+    <xs:restriction base="AType">
+      <xs:maxLength value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="supplierSearchNameType">
+    <xs:restriction base="AUType">
+      <xs:maxLength value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="relationNumberType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="999999999999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="searchStringType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="eanCodeType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="99999999999999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="characteristicsCodeType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="9999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="orderTypeType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="99"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="operatorType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="valueType">
+    <xs:restriction base="UTType"/>
+  </xs:simpleType>
+  <xs:simpleType name="numberPositiveOrNegativeType">
+    <xs:annotation>
+      <xs:documentation>With this option you can enter a default value as positive or negative. This value will initially be copied from the characteristic. You can only enter this value when the default indication for the article characteristic does NOT have the value "fixed" and when the characteristic has date or time as a type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="SType">
+      <xs:minInclusive value="-999999999"/>
+      <xs:maxInclusive value="999999999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="numberPerUnitType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="999999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="grossWeightPerUnitType">
+    <xs:restriction base="S3Type">
+      <xs:minInclusive value="-9999999999.999"/>
+      <xs:maxInclusive value="9999999999.999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="invoiceValueType">
+    <xs:restriction base="N2Type">
+      <xs:maxInclusive value="9999999999999.99"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="lengthType">
+    <xs:restriction base="N3Type">
+      <xs:maxInclusive value="999.999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="widthType">
+    <xs:restriction base="N3Type">
+      <xs:maxInclusive value="999.999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="heightType">
+    <xs:restriction base="N3Type">
+      <xs:maxInclusive value="999.999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="quantityPackageCode1Type">
+    <xs:restriction base="S3Type">
+      <xs:minInclusive value="-9999999999.999"/>
+      <xs:maxInclusive value="9999999999.999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="quantityPackageCode2Type">
+    <xs:restriction base="S3Type">
+      <xs:minInclusive value="-9999999999.999"/>
+      <xs:maxInclusive value="9999999999.999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="quantityPackageCode3Type">
+    <xs:restriction base="S3Type">
+      <xs:minInclusive value="-9999999999.999"/>
+      <xs:maxInclusive value="9999999999.999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="quantityPackageCode4Type">
+    <xs:restriction base="S3Type">
+      <xs:minInclusive value="-9999999999.999"/>
+      <xs:maxInclusive value="9999999999.999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="calculationPackageCodeType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="palletRegistrationType">
+    <xs:restriction base="CAType"/>
+  </xs:simpleType>
+  <xs:simpleType name="informationType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="amendAtOrderEntryType">
+    <xs:restriction base="CAType"/>
+  </xs:simpleType>
+  <xs:simpleType name="producePerType">
+    <xs:restriction base="S3Type">
+      <xs:minInclusive value="-999999999.999"/>
+      <xs:maxInclusive value="999999999.999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="partArticleCodeType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="35"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="requiredNumberType">
+    <xs:restriction base="S3Type">
+      <xs:minInclusive value="-999999999.999"/>
+      <xs:maxInclusive value="999999999.999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="countryCodeType">
+    <xs:restriction base="AUType">
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="importTaricCodeType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="22"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="exportTaricCodeType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="22"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="countryOfOriginType">
+    <xs:restriction base="AUType">
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="taricCode1Type">
+    <xs:restriction base="AType">
+      <xs:maxLength value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="taricCode2Type">
+    <xs:restriction base="AType">
+      <xs:maxLength value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="nationalSubDivCodeType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="nationalExciseCodeType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="typeOfAntiDumpType">
+    <xs:restriction base="AUType">
+      <xs:maxLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

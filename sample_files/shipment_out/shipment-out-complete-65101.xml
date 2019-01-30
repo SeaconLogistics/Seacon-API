@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shipment-out xmlns="http://www.kewill.com/logistics/klic/shipment-out" type="tag">
+  <ediCustomerNumber>99999998</ediCustomerNumber>
+  <ediCustomerDepartment/>
+  <ediParm1>4</ediParm1>
+  <ediParm2>s</ediParm2>
+  <ediParm3>d</ediParm3>
+  <transmitter/>
+  <receiver/>
+  <ediReference>EDI reference</ediReference>
+  <referenceIndication>0</referenceIndication>
+  <internalShipmentNumber>0</internalShipmentNumber>
+  <ediFunction1>6</ediFunction1>
+  <ediCustomerSearchName/>
+  <reason/>
+  <employeeInitials/>
+  <dateTimeZone>1970-01-01T01:00:00Z</dateTimeZone>
+  <file type="tag">
+    <operationalPeriod>2008/11</operationalPeriod>
+    <arrivalDate>1970-01-01</arrivalDate>
+    <loadingDate>2008-11-04</loadingDate>
+    <loadingTime>08:30:00</loadingTime>
+    <unloadingDate>2008-11-05</unloadingDate>
+    <unloadingTime>10:00:00</unloadingTime>
+    <marksAndNumber/>
+    <waybill/>
+    <houseWaybill/>
+    <primaryReference>123ABC</primaryReference>
+    <serviceLevel>12</serviceLevel>
+    <tariffType/>
+    <deliveryTerm>FH</deliveryTerm>
+    <deliveryTermPlace/>
+    <originPlaceCode>NLRTM</originPlaceCode>
+    <destinationPlaceCode>FRPAR</destinationPlaceCode>
+    <codeShedHandling>true</codeShedHandling>
+    <daysOfShedRent>0</daysOfShedRent>
+    <shedLocationBerth/>
+    <totals>
+      <quantity>1</quantity>
+      <packageCode>ep</packageCode>
+      <commodityCode>ELEC</commodityCode>
+      <commodityDescription/>
+      <grossWeight>250</grossWeight>
+      <netWeight>245</netWeight>
+      <chargeableWeight>0</chargeableWeight>
+      <volumeCode>C</volumeCode>
+      <volume>1.000</volume>
+      <cubicMeters>0</cubicMeters>
+      <loadingMeters>0</loadingMeters>
+      <goodsValueCurrency>EUR</goodsValueCurrency>
+      <goodsValue>1000.00</goodsValue>
+    </totals>
+    <dimension>
+      <length>0</length>
+      <width>0</width>
+      <height>0</height>
+    </dimension>
+    <transport>
+      <deliveryTermAgent/>
+      <domesticTransport>N</domesticTransport>
+      <domesticTransportAmount>0</domesticTransportAmount>
+      <CollectiveCMR>true</CollectiveCMR>
+      <containerPlanning>true</containerPlanning>
+    </transport>
+    <seafreight>
+      <finalDestinationPlaceCode/>
+      <fclLcl/>
+      <originals>0</originals>
+      <copies>0</copies>
+      <vesselCurrencyCode/>
+      <vesselRate>0</vesselRate>
+      <disbursementPrepaidCollect>P</disbursementPrepaidCollect>
+      <placeOfReceipt/>
+      <placeOfDelivery/>
+    </seafreight>
+    <airfreight>
+      <airwayBill>0</airwayBill>
+      <routing/>
+      <cargoPrepaidCollect>P</cargoPrepaidCollect>
+      <cargoCurrencyCode/>
+      <cargoExchangeRate>0</cargoExchangeRate>
+      <cargoAmount>0</cargoAmount>
+      <costsPrepaidCollect>P</costsPrepaidCollect>
+      <costsCurrencyCode/>
+      <costsExchangeRate>0</costsExchangeRate>
+      <costsAmount>0</costsAmount>
+      <carriageAmount>0</carriageAmount>
+      <customsAmount>0</customsAmount>
+      <insuranceAmount>0</insuranceAmount>
+    </airfreight>
+    <customItems>
+      <manifestNumber/>
+      <documentCode>T-1</documentCode>
+      <documentNumber/>
+      <documentIssuingOffice/>
+      <countryOfOrigin/>
+      <countryOfDespatch/>
+      <countryOfDestination/>
+      <documentIssuingDate>1970-01-01</documentIssuingDate>
+    </customItems>
+    <amounts>
+      <amount1>0</amount1>
+      <amount2>0</amount2>
+      <amount3>0</amount3>
+      <amount4>0</amount4>
+      <amount5>0</amount5>
+      <amount6>0</amount6>
+      <amount7>0</amount7>
+      <amount8>0</amount8>
+      <amount9>0</amount9>
+    </amounts>
+    <codes>
+      <code1>0</code1>
+      <code2>0</code2>
+      <code3>0</code3>
+      <code4>0</code4>
+      <code5>0</code5>
+      <code6>0</code6>
+      <code7>0</code7>
+      <code8>0</code8>
+    </codes>
+    <parameters>
+      <parameterYn01>true</parameterYn01>
+      <parameterYn02>true</parameterYn02>
+      <parameterYn03>true</parameterYn03>
+      <parameterYn04>true</parameterYn04>
+      <parameterYn05>true</parameterYn05>
+      <parameterYn06>true</parameterYn06>
+      <parameterYn07>true</parameterYn07>
+      <parameterYn08>true</parameterYn08>
+      <parameterYn09>true</parameterYn09>
+      <parameterYn10>true</parameterYn10>
+    </parameters>
+    <department>01dp</department>
+    <statusCode>1</statusCode>
+    <tailorFiller15/>
+    <cashInfo type="tag">
+      <sequenceNumber>0</sequenceNumber>
+      <currencyCode>EUR</currencyCode>
+      <amount>100.00</amount>
+      <text/>
+    </cashInfo>
+    <extraAmount type="tag">
+      <amountType>0</amountType>
+      <currencyCode>EUR</currencyCode>
+      <amount>0</amount>
+    </extraAmount>
+    <freightCharge type="tag">
+      <sequenceNumber>0</sequenceNumber>
+      <otherChargeCode/>
+      <description/>
+      <currencyCode/>
+      <amount>0</amount>
+    </freightCharge>
+    <meansOfTransport type="tag">
+      <displaySequence>0</displaySequence>
+      <motMode>30</motMode>
+      <motType>0</motType>
+      <motID>0</motID>
+      <motName/>
+      <motIdentity/>
+      <motOrigin/>
+      <motDestination/>
+      <shipbroker>
+        <searchName>KEWILL</searchName>
+        <relationNumber>0</relationNumber>
+        <searchString/>
+        <vatIdNumber>NL123456789.01</vatIdNumber>
+        <ILNNumber/>
+      </shipbroker>
+      <shedLocationBerth/>
+      <ETD>1970-01-01T01:00:00Z</ETD>
+      <ATD>1970-01-01T01:00:00Z</ATD>
+      <ETA>1970-01-01T01:00:00Z</ETA>
+      <ATA>1970-01-01T01:00:00Z</ATA>
+      <motNationality/>
+      <equipmentEmissionID/>
+      <emission type="tag">
+        <emissionType>CO2</emissionType>
+        <estimatedEmissionValue>0</estimatedEmissionValue>
+        <actualEmissionValue>0</actualEmissionValue>
+      </emission>
+    </meansOfTransport>
+    <textKeys type="tag">
+      <textKey>502</textKey>
+      <date>1970-01-01</date>
+      <fromTime>00:00:00Z</fromTime>
+      <toTime>00:00:00Z</toTime>
+      <additionalInformation>Customer reference number</additionalInformation>
+    </textKeys>
+    <dateTimeZones type="tag">
+      <typeOfDate>0</typeOfDate>
+      <dateTimeZone>1970-01-01T01:00:00Z</dateTimeZone>
+    </dateTimeZones>
+    <address type="tag">
+      <addressType>0</addressType>
+      <searchName>KEWILL</searchName>
+      <relationNumber>0</relationNumber>
+      <searchString/>
+      <additional>
+        <vatIdNumber>NL123456789.01</vatIdNumber>
+        <ILNNumber/>
+      </additional>
+      <addressDetails>
+        <nameLine1>Kewill BV</nameLine1>
+        <nameLine2>Jason</nameLine2>
+        <nameLine3/>
+        <addressLine1>Stationsweg 45</addressLine1>
+        <addressLine2/>
+        <addressLine3>G40 3RE Glasgow</addressLine3>
+        <cityName>Zwijndrecht</cityName>
+        <cityName2/>
+        <destinationCode/>
+        <postalCode>3331LR</postalCode>
+        <countryCode>NL</countryCode>
+      </addressDetails>
+      <contactInformation>
+        <languageCode>2</languageCode>
+        <e-mailAddress>employee@examplelogistics.com</e-mailAddress>
+        <internetAddress/>
+        <contactPerson/>
+        <telephoneNumber>+31 (0) 78 6123744</telephoneNumber>
+        <telefaxNumber>+31 (0) 78 6123666</telefaxNumber>
+      </contactInformation>
+      <manualTimeFrames>true</manualTimeFrames>
+      <timeFrames type="tag">
+        <fromTime>00:00:00Z</fromTime>
+        <tillTime>00:00:00Z</tillTime>
+        <tailorFillerA10/>
+      </timeFrames>
+    </address>
+    <address type="tag">
+      <addressType>1</addressType>
+      <searchName>LOADINGEXAMPLE</searchName>
+      <relationNumber>0</relationNumber>
+      <searchString/>
+      <additional>
+        <vatIdNumber/>
+        <ILNNumber/>
+      </additional>
+      <addressDetails>
+        <nameLine1>Schiphol Airport</nameLine1>
+        <nameLine2/>
+        <nameLine3/>
+        <addressLine1>Handelskade 25</addressLine1>
+        <addressLine2>Hall 15</addressLine2>
+        <addressLine3/>
+        <cityName>Amsterdam</cityName>
+        <cityName2/>
+        <destinationCode/>
+        <postalCode>1118CP</postalCode>
+        <countryCode>NL</countryCode>
+      </addressDetails>
+      <contactInformation>
+        <languageCode>0</languageCode>
+        <e-mailAddress/>
+        <internetAddress/>
+        <contactPerson>Manager in chrg</contactPerson>
+        <telephoneNumber/>
+        <telefaxNumber/>
+      </contactInformation>
+      <manualTimeFrames>true</manualTimeFrames>
+      <timeFrames type="tag">
+        <fromTime>00:00:00Z</fromTime>
+        <tillTime>00:00:00Z</tillTime>
+        <tailorFillerA10/>
+      </timeFrames>
+    </address>
+    <address type="tag">
+      <addressType>2</addressType>
+      <searchName>CONSIGNOREXAMPLE</searchName>
+      <relationNumber>0</relationNumber>
+      <searchString/>
+      <additional>
+        <vatIdNumber/>
+        <ILNNumber/>
+      </additional>
+      <addressDetails>
+        <nameLine1>Sender Company</nameLine1>
+        <nameLine2/>
+        <nameLine3/>
+        <addressLine1>van Goghlaan 1</addressLine1>
+        <addressLine2/>
+        <addressLine3/>
+        <cityName>Eindhoven</cityName>
+        <cityName2/>
+        <destinationCode/>
+        <postalCode>9711GG</postalCode>
+        <countryCode>NL</countryCode>
+      </addressDetails>
+      <contactInformation>
+        <languageCode>0</languageCode>
+        <e-mailAddress/>
+        <internetAddress/>
+        <contactPerson/>
+        <telephoneNumber/>
+        <telefaxNumber/>
+      </contactInformation>
+      <manualTimeFrames>true</manualTimeFrames>
+      <timeFrames type="tag">
+        <fromTime>00:00:00Z</fromTime>
+        <tillTime>00:00:00Z</tillTime>
+        <tailorFillerA10/>
+      </timeFrames>
+    </address>
+    <address type="tag">
+      <addressType>3</addressType>
+      <searchName>UNLOADINGEXAMPLE</searchName>
+      <relationNumber>0</relationNumber>
+      <searchString/>
+      <additional>
+        <vatIdNumber/>
+        <ILNNumber/>
+      </additional>
+      <addressDetails>
+        <nameLine1>Philips</nameLine1>
+        <nameLine2/>
+        <nameLine3/>
+        <addressLine1>Glaslaan 2</addressLine1>
+        <addressLine2>Door 17</addressLine2>
+        <addressLine3/>
+        <cityName>Groningen</cityName>
+        <cityName2/>
+        <destinationCode/>
+        <postalCode>5616LW</postalCode>
+        <countryCode>NL</countryCode>
+      </addressDetails>
+      <contactInformation>
+        <languageCode>0</languageCode>
+        <e-mailAddress/>
+        <internetAddress/>
+        <contactPerson>Mr Anybody</contactPerson>
+        <telephoneNumber/>
+        <telefaxNumber/>
+      </contactInformation>
+      <manualTimeFrames>true</manualTimeFrames>
+      <timeFrames type="tag">
+        <fromTime>00:00:00Z</fromTime>
+        <tillTime>00:00:00Z</tillTime>
+        <tailorFillerA10/>
+      </timeFrames>
+    </address>
+    <address type="tag">
+      <addressType>4</addressType>
+      <searchName>CONSIGNEEEXAMPLE</searchName>
+      <relationNumber>0</relationNumber>
+      <searchString/>
+      <additional>
+        <vatIdNumber/>
+        <ILNNumber/>
+      </additional>
+      <addressDetails>
+        <nameLine1>Receiver Company</nameLine1>
+        <nameLine2/>
+        <nameLine3/>
+        <addressLine1>Rembrandtstraat 15</addressLine1>
+        <addressLine2/>
+        <addressLine3/>
+        <cityName>Vlaardingen</cityName>
+        <cityName2/>
+        <destinationCode/>
+        <postalCode>6016HH</postalCode>
+        <countryCode>NL</countryCode>
+      </addressDetails>
+      <contactInformation>
+        <languageCode>0</languageCode>
+        <e-mailAddress/>
+        <internetAddress/>
+        <contactPerson/>
+        <telephoneNumber/>
+        <telefaxNumber/>
+      </contactInformation>
+      <manualTimeFrames>true</manualTimeFrames>
+      <timeFrames type="tag">
+        <fromTime>00:00:00Z</fromTime>
+        <tillTime>00:00:00Z</tillTime>
+        <tailorFillerA10/>
+      </timeFrames>
+    </address>
+    <extraReference type="tag">
+      <referenceCode>2</referenceCode>
+      <referenceText>External Order</referenceText>
+      <tailorFiller20/>
+    </extraReference>
+    <returnReference type="tag">
+      <referenceText>External Order</referenceText>
+      <mainFileNumber>0</mainFileNumber>
+    </returnReference>
+    <additionalServices type="tag">
+      <serviceCode/>
+      <tariffBaseValue>100.00</tariffBaseValue>
+      <conditionValue/>
+    </additionalServices>
+    <conNote type="tag">
+      <prefix>KLC</prefix>
+      <number>0</number>
+    </conNote>
+    <link type="tag">
+      <linkType>0</linkType>
+      <linkText/>
+      <linkAddress/>
+    </link>
+    <trackingAndTracing type="tag">
+      <dateTimeZone>1970-01-01T01:00:00Z</dateTimeZone>
+      <destinationCode/>
+      <code>EDIRECEIV</code>
+      <trackingStatus>0</trackingStatus>
+      <remark_1/>
+      <remark_2/>
+    </trackingAndTracing>
+    <freeText type="tag">
+      <typeOfFreeText>WVA</typeOfFreeText>
+      <text>Road works in progress.</text>
+    </freeText>
+    <emission type="tag">
+      <emissionType>CO2</emissionType>
+      <estimatedEmissionValue>0</estimatedEmissionValue>
+      <actualEmissionValue>0</actualEmissionValue>
+    </emission>
+    <transportInstruction type="tag">
+      <carriageCondition>2</carriageCondition>
+      <description/>
+    </transportInstruction>
+    <planCharacteristic type="tag">
+      <characteristicCode>COOL</characteristicCode>
+    </planCharacteristic>
+    <shippingUnit type="tag">
+      <containedInMSU/>
+      <shippingUnitNumber>0</shippingUnitNumber>
+      <externalUnit>999991389098480982</externalUnit>
+      <unitStatus>0</unitStatus>
+      <qualityCode/>
+      <carrierReference type="tag">
+        <carrier>
+          <searchName>KEWILL</searchName>
+          <relationNumber>0</relationNumber>
+          <searchString/>
+          <vatIdNumber>NL123456789.01</vatIdNumber>
+          <ILNNumber/>
+        </carrier>
+        <externalUnit>099800000200028G</externalUnit>
+        <checkMethod>3</checkMethod>
+      </carrierReference>
+      <shippingUnitDetails type="tag">
+        <quantity>1</quantity>
+        <packageCode>ep</packageCode>
+        <grossWeight>250</grossWeight>
+        <netWeight>245</netWeight>
+        <chargeableWeight>0</chargeableWeight>
+        <volume>1.000</volume>
+        <volumeCode>C</volumeCode>
+        <cubicMeters>0</cubicMeters>
+        <loadingMeters>0</loadingMeters>
+        <goodsValue>1000.00</goodsValue>
+      </shippingUnitDetails>
+    </shippingUnit>
+    <goodsLine type="tag">
+      <articleCode>articleCode</articleCode>
+      <primaryReference>123ABC</primaryReference>
+      <quantity>1</quantity>
+      <packageCode>ep</packageCode>
+      <commodityCode>ELEC</commodityCode>
+      <grossWeight>250</grossWeight>
+      <netWeight>245</netWeight>
+      <volumeCode>C</volumeCode>
+      <dimension>
+        <length>0</length>
+        <width>0</width>
+        <height>0</height>
+      </dimension>
+      <volume>1.000</volume>
+      <cubicMeters>0</cubicMeters>
+      <loadingMeters>0</loadingMeters>
+      <chargeableWeight>0</chargeableWeight>
+      <goodsValueCurrency>EUR</goodsValueCurrency>
+      <goodsValue>1000.00</goodsValue>
+      <quantityOfShippingUnits>1</quantityOfShippingUnits>
+      <packageCodeOfShippingUnits>ep</packageCodeOfShippingUnits>
+      <dangerousGoods>
+        <dangerousGoodsUNNumber>1001</dangerousGoodsUNNumber>
+        <dangerousGoodsUNSuffix>7</dangerousGoodsUNSuffix>
+      </dangerousGoods>
+      <customLineItems>
+        <taricCode/>
+        <documentCode>T-1</documentCode>
+        <documentNumber/>
+        <documentIssuingOffice/>
+        <countryOfOrigin>US</countryOfOrigin>
+        <documentIssuingDate>1970-01-01</documentIssuingDate>
+        <statisticalQuantity>0</statisticalQuantity>
+      </customLineItems>
+      <tailorFiller20/>
+      <subQuantity type="tag">
+        <quantity>1</quantity>
+        <length>0</length>
+        <width>0</width>
+        <height>0</height>
+        <volumeCode>C</volumeCode>
+        <volume>1.000</volume>
+        <cubicMeters>0</cubicMeters>
+        <loadingMeters>0</loadingMeters>
+        <packageCode>ep</packageCode>
+        <commodityCode>ELEC</commodityCode>
+        <commodityDescription/>
+        <marksNumberLong/>
+        <grossWeight>250</grossWeight>
+        <netWeight>245</netWeight>
+        <chargeableWeight>0</chargeableWeight>
+      </subQuantity>
+      <marksAndNumbers type="tag">
+        <marksAndNumber/>
+      </marksAndNumbers>
+      <goodsDescription type="tag">
+        <description/>
+      </goodsDescription>
+      <dangerousGoodsSpecification type="tag">
+        <quantity>1</quantity>
+        <dangerousGoodsPackageCode>1A</dangerousGoodsPackageCode>
+        <grossWeight>250</grossWeight>
+        <netWeight>245</netWeight>
+        <volume>1</volume>
+        <goodsAmountInUnit>2</goodsAmountInUnit>
+        <totalQuantity>245</totalQuantity>
+        <dangerousGoodsUNNumber>1001</dangerousGoodsUNNumber>
+        <dangerousGoodsUNSuffix>7</dangerousGoodsUNSuffix>
+        <unClass>4.1</unClass>
+        <dangerousGoodsName>SELF-REACTIVE SOLID TYPE F</dangerousGoodsName>
+        <technicalDescription>Techn Desc UN 1001/7</technicalDescription>
+        <subsidiaryRiskClassI>1A</subsidiaryRiskClassI>
+        <subsidiaryRiskClassII>1AA</subsidiaryRiskClassII>
+        <subsidiaryRiskClassIII>1AAA</subsidiaryRiskClassIII>
+        <ADRClass>2</ADRClass>
+        <ADRCode>1A</ADRCode>
+        <RIDClass>2</RIDClass>
+        <RIDCode>1A</RIDCode>
+        <ADNClass>2</ADNClass>
+        <ADNCode>1A</ADNCode>
+        <ICAClass>1.2G</ICAClass>
+        <ICACode>1A</ICACode>
+        <IMDClass>2.3</IMDClass>
+        <IMDCode/>
+        <packagingGroup>II</packagingGroup>
+        <goodsUnit>2</goodsUnit>
+        <points>736</points>
+        <emergencyTemperature>1.5</emergencyTemperature>
+        <controlTemperature/>
+        <flashPoint>-37</flashPoint>
+        <emergencyScheduleNumber/>
+        <tunnelCode>A</tunnelCode>
+        <provisions>Carriage in accordance with 1.1.4.2.1</provisions>
+        <allowedOnRailIndicator>true</allowedOnRailIndicator>
+        <limitedQuantityIndicator>false</limitedQuantityIndicator>
+        <expectedQuantityIndicator>true</expectedQuantityIndicator>
+        <harmfulIndicator>false</harmfulIndicator>
+        <wasteIndicator>false</wasteIndicator>
+        <emptyIndicator>false</emptyIndicator>
+        <marinePollutantIndicator>false</marinePollutantIndicator>
+        <marinePollutantNameIndicator>true</marinePollutantNameIndicator>
+        <maritimeFirstAidGuide/>
+        <innerPackageCode>CT</innerPackageCode>
+        <additionalInformation>Additional information</additionalInformation>
+        <technicalNames type="tag">
+          <isoLanguageCode>en</isoLanguageCode>
+          <technicalName>Techn Name UN 1001/7</technicalName>
+        </technicalNames>
+      </dangerousGoodsSpecification>
+      <container type="tag">
+        <ID/>
+        <type/>
+        <sealNumber/>
+        <ventilation/>
+        <airHumidity>23.10</airHumidity>
+        <temperatureCelsius>0</temperatureCelsius>
+        <temperatureFahrenheit>0</temperatureFahrenheit>
+        <quantity>1</quantity>
+        <grossWeight>250</grossWeight>
+        <volume>1.000</volume>
+        <goodsValue>1000.00</goodsValue>
+      </container>
+      <shippingUnit type="tag">
+        <containedInMSU/>
+        <shippingUnitNumber>0</shippingUnitNumber>
+        <externalUnit>999991389098480982</externalUnit>
+        <unitStatus>0</unitStatus>
+        <qualityCode/>
+        <carrierReference type="tag">
+          <carrier>
+            <searchName>KEWILL</searchName>
+            <relationNumber>0</relationNumber>
+            <searchString/>
+            <vatIdNumber>NL123456789.01</vatIdNumber>
+            <ILNNumber/>
+          </carrier>
+          <externalUnit>099800000200028G</externalUnit>
+          <checkMethod>3</checkMethod>
+        </carrierReference>
+        <shippingUnitDetails type="tag">
+          <quantity>1</quantity>
+          <packageCode>ep</packageCode>
+          <grossWeight>250</grossWeight>
+          <netWeight>245</netWeight>
+          <chargeableWeight>0</chargeableWeight>
+          <volume>1.000</volume>
+          <volumeCode>C</volumeCode>
+          <cubicMeters>0</cubicMeters>
+          <loadingMeters>0</loadingMeters>
+          <goodsValue>1000.00</goodsValue>
+        </shippingUnitDetails>
+      </shippingUnit>
+    </goodsLine>
+    <container type="tag">
+      <ID/>
+      <type/>
+      <sealNumber/>
+      <ventilation/>
+      <airHumidity>23.10</airHumidity>
+      <temperatureCelsius>0</temperatureCelsius>
+      <temperatureFahrenheit>0</temperatureFahrenheit>
+      <quantity>1</quantity>
+      <grossWeight>250</grossWeight>
+      <volume>1.000</volume>
+      <goodsValue>1000.00</goodsValue>
+    </container>
+    <tailorMade type="tag">
+      <tailorCode/>
+      <value/>
+    </tailorMade>
+  </file>
+</shipment-out>

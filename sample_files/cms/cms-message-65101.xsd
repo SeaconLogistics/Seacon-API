@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.kewill.com/logistics/klic/cms" elementFormDefault="qualified" targetNamespace="http://www.kewill.com/logistics/klic/cms">
+  <xs:include schemaLocation="cms-elements-65101.xsd"/>
+  <xs:element name="cms" type="cmsType"/>
+  <xs:complexType name="cmsType">
+    <xs:sequence>
+      <xs:element name="ediCustomerNumber" type="ediCustomerNumberType" minOccurs="0"/>
+      <xs:element name="ediCustomerDepartment" type="ediCustomerDepartmentType" minOccurs="0"/>
+      <xs:element name="ediParm1" type="ediParm1Type" minOccurs="0"/>
+      <xs:element name="ediParm2" type="ediParm2Type" minOccurs="0"/>
+      <xs:element name="ediParm3" type="ediParm3Type" minOccurs="0"/>
+      <xs:element name="transmitter" type="transmitterType" minOccurs="0"/>
+      <xs:element name="receiver" type="receiverType" minOccurs="0"/>
+      <xs:element name="ediReference" type="ediReferenceType"/>
+      <xs:element name="referenceIndication" type="referenceIndicationType" minOccurs="0"/>
+      <xs:element name="internalOrderNumber" type="internalOrderNumberType" minOccurs="0"/>
+      <xs:element name="ediFunction1" type="ediFunction1Type"/>
+      <xs:element name="ediCustomerSearchName" type="ediCustomerSearchNameType" minOccurs="0"/>
+      <xs:element name="reason" type="reasonType" minOccurs="0"/>
+      <xs:element name="employeesInitials" type="employeesInitialsType" minOccurs="0"/>
+      <xs:element name="dateTimeZone" type="dateTimeType" minOccurs="0"/>
+      <xs:element name="order" type="orderType"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="orderType">
+    <xs:sequence>
+      <xs:element name="loadingDate" type="loadingDateType" minOccurs="0"/>
+      <xs:element name="loadingTime" type="loadingTimeType" minOccurs="0"/>
+      <xs:element name="unloadingDate" type="unloadingDateType" minOccurs="0"/>
+      <xs:element name="unloadingTime" type="unloadingTimeType" minOccurs="0"/>
+      <xs:element name="waybill" type="waybillType" minOccurs="0"/>
+      <xs:element name="houseWaybill" type="houseWaybillType" minOccurs="0"/>
+      <xs:element name="primaryReference" type="primaryReferenceType" minOccurs="0"/>
+      <xs:element name="deliveryTerm" type="deliveryTermType" minOccurs="0"/>
+      <xs:element name="deliveryTermPlace" type="deliveryTermPlaceType" minOccurs="0"/>
+      <xs:element name="originPlaceCode" type="originPlaceCodeType" minOccurs="0"/>
+      <xs:element name="destinationPlaceCode" type="destinationPlaceCodeType" minOccurs="0"/>
+      <xs:element name="transport" type="transportType" minOccurs="0"/>
+      <xs:element name="airfreight" type="airfreightType" minOccurs="0"/>
+      <xs:element name="customItems" type="customItemsType" minOccurs="0"/>
+      <xs:element name="amounts" type="amountsType" minOccurs="0"/>
+      <xs:element name="codes" type="codesType" minOccurs="0"/>
+      <xs:element name="parameters" type="parametersType" minOccurs="0"/>
+      <xs:element name="tailorFiller15" type="tailorFiller15Type" minOccurs="0"/>
+      <xs:element name="extraAmount" type="extraAmountType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="address" type="addressType" minOccurs="0" maxOccurs="100"/>
+      <xs:element name="extraReference" type="extraReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="link" type="linkType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="freeText" type="freeTextType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="invoiceSet" type="invoiceSetType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="articleLine" type="articleLineType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="container" type="containerType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="costAndCharge" type="costAndChargeType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="tailorMade" type="tailorMadeType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="extraAmountType">
+    <xs:sequence>
+      <xs:element name="amountType" type="amountTypeType" minOccurs="0"/>
+      <xs:element name="currencyCode" type="currencyCodeType" minOccurs="0"/>
+      <xs:element name="amount" type="ST_amountS219" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="addressType">
+    <xs:sequence>
+      <xs:element name="addressType" type="addressTypeType" minOccurs="0"/>
+      <xs:element name="searchName" type="searchNameType" minOccurs="0"/>
+      <xs:element name="relationNumber" type="relationNumberType" minOccurs="0"/>
+      <xs:element name="searchString" type="searchStringType" minOccurs="0"/>
+      <xs:element name="additional" type="additionalType" minOccurs="0"/>
+      <xs:element name="addressDetails" type="addressDetailsType" minOccurs="0"/>
+      <xs:element name="contactInformation" type="contactInformationType" minOccurs="0"/>
+      <xs:element name="timeFrames" type="timeFramesType" minOccurs="0" maxOccurs="99"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="timeFramesType">
+    <xs:annotation>
+      <xs:documentation>The opening hours of an address.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="fromTime" type="fromTimeType" minOccurs="0"/>
+      <xs:element name="tillTime" type="tillTimeType" minOccurs="0"/>
+      <xs:element name="tailorFillerA10" type="tailorFillerA10Type" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="extraReferenceType">
+    <xs:sequence>
+      <xs:element name="referenceCode" type="referenceCodeType" minOccurs="0"/>
+      <xs:element name="referenceText" type="referenceTextType" minOccurs="0"/>
+      <xs:element name="tailorFiller20" type="tailorFiller20Type" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="linkType">
+    <xs:sequence>
+      <xs:element name="linkType" type="linkTypeType" minOccurs="0"/>
+      <xs:element name="linkText" type="linkTextType" minOccurs="0"/>
+      <xs:element name="linkAddress" type="linkAddressType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="freeTextType">
+    <xs:sequence>
+      <xs:element name="typeOfFreeText" type="typeOfFreeTextType" minOccurs="0"/>
+      <xs:element name="text" type="textType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="invoiceSetType">
+    <xs:sequence>
+      <xs:element name="set" type="setType" minOccurs="0"/>
+      <xs:element name="currencyCodePurchase" type="currencyCodePurchaseType" minOccurs="0"/>
+      <xs:element name="currencyCodeFreight" type="currencyCodeFreightType" minOccurs="0"/>
+      <xs:element name="currencyCodeInsurance" type="currencyCodeInsuranceType" minOccurs="0"/>
+      <xs:element name="currencyCodeOtherCosts" type="currencyCodeOtherCostsType" minOccurs="0"/>
+      <xs:element name="invoices" type="invoicesType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="invoicesType">
+    <xs:sequence>
+      <xs:element name="invoiceReference" type="invoiceReferenceType" minOccurs="0"/>
+      <xs:element name="purchasePrice" type="purchasePriceType" minOccurs="0"/>
+      <xs:element name="freightCosts" type="freightCostsType" minOccurs="0"/>
+      <xs:element name="insuranceCosts" type="insuranceCostsType" minOccurs="0"/>
+      <xs:element name="otherCosts" type="otherCostsType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="articleLineType">
+    <xs:sequence>
+      <xs:element name="orderType" type="orderTypeType" minOccurs="0"/>
+      <xs:element name="articleCode" type="articleCodeType" minOccurs="0"/>
+      <xs:element name="taricCode" type="taricCodeType" minOccurs="0"/>
+      <xs:element name="quantity" type="ST_quantityS313" minOccurs="0"/>
+      <xs:element name="packageCode" type="packageCodeType" minOccurs="0"/>
+      <xs:element name="expected" type="expectedType" minOccurs="0"/>
+      <xs:element name="fromCustomsStatus" type="fromCustomsStatusType" minOccurs="0"/>
+      <xs:element name="customLineItems" type="customLineItemsWms" minOccurs="0"/>
+      <xs:element name="invoiceInfo" type="invoiceInfoType" minOccurs="0"/>
+      <xs:element name="orderTypeSpecification" type="orderTypeSpecificationType" minOccurs="0"/>
+      <xs:element name="selectionCodes" type="selectionCodesType" minOccurs="0"/>
+      <xs:element name="extraTransactionData" type="extraTransactionDataType" minOccurs="0"/>
+      <xs:element name="tailorFiller20" type="tailorFiller20Type" minOccurs="0"/>
+      <xs:element name="articleLineFreeText" type="articleLineFreeTextType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="lot" type="lotType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="lotConditions" type="lotConditionsType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="articleLineFreeTextType">
+    <xs:sequence>
+      <xs:element name="articleLineText" type="articleLineTextType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="lotType">
+    <xs:sequence>
+      <xs:element name="lotCode" type="lotCodeType" minOccurs="0"/>
+      <xs:element name="lotDate" type="lotDateType" minOccurs="0"/>
+      <xs:element name="lotCodeDateSequence" type="lotCodeDateSequenceType" minOccurs="0"/>
+      <xs:element name="expected" type="expectedType" minOccurs="0"/>
+      <xs:element name="tailorFiller20" type="tailorFiller20Type" minOccurs="0"/>
+      <xs:element name="lotCharacteristics" type="lotCharacteristicsType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="lotCharacteristicsType">
+    <xs:annotation>
+      <xs:documentation>Lotcharacteristics are characterists per lot, not being the (expire) date, like quality, quality checked Y/N,colour (when not an different article code), supplier article code,......</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="characteristicsCode" type="characteristicsCodeType" minOccurs="0"/>
+      <xs:element name="value" type="valueType" minOccurs="0"/>
+      <xs:element name="proRataNumber" type="proRataNumberType" minOccurs="0"/>
+      <xs:element name="lotCharacteristicsFreeText" type="lotCharacteristicsFreeTextType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="lotCharacteristicsFreeTextType">
+    <xs:annotation>
+      <xs:documentation>This tag is used when the characteristic represents a freetext possibility.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="lotCharacteristicsText" type="lotCharacteristicsTextType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="lotConditionsType">
+    <xs:sequence>
+      <xs:element name="characteristicsCode" type="characteristicsCodeType" minOccurs="0"/>
+      <xs:element name="operator" type="operatorType" minOccurs="0"/>
+      <xs:element name="value" type="valueType" minOccurs="0"/>
+      <xs:element name="lotConditionsDescription" type="lotConditionsDescriptionType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="lotConditionsDescriptionType">
+    <xs:sequence>
+      <xs:element name="lotCharacteristicsText" type="lotCharacteristicsTextType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="containerType">
+    <xs:annotation>
+      <xs:documentation>Although the max occurrence is set to unbound it is depending on settings. When the 'old' (prior version 6.03) container structure is used, the max occurrence is effectively 99 instead of unbound.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="IDType" minOccurs="0"/>
+      <xs:element name="type" type="typeType" minOccurs="0"/>
+      <xs:element name="sealNumber" type="sealNumberLong" minOccurs="0"/>
+      <xs:element name="ventilation" type="ventilationType" minOccurs="0"/>
+      <xs:element name="airHumidity" type="airHumidityType" minOccurs="0"/>
+      <xs:element name="temperatureCelsius" type="temperatureCelsiusType" minOccurs="0"/>
+      <xs:element name="temperatureFahrenheit" type="temperatureFahrenheitType" minOccurs="0"/>
+      <xs:element name="quantity" type="quantityType" minOccurs="0"/>
+      <xs:element name="grossWeight" type="grossWeightType" minOccurs="0"/>
+      <xs:element name="volume" type="volumeType" minOccurs="0"/>
+      <xs:element name="goodsValue" type="goodsValueType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="costAndChargeType">
+    <xs:sequence>
+      <xs:element name="transactionType" type="transactionTypeType" minOccurs="0"/>
+      <xs:element name="addressType" type="addressTypeType" minOccurs="0"/>
+      <xs:element name="activityCode" type="activityCodeType" minOccurs="0"/>
+      <xs:element name="currencyCode" type="currencyCodeType" minOccurs="0"/>
+      <xs:element name="amount" type="amountType" minOccurs="0"/>
+      <xs:element name="description" type="ST_descriptionA50" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="tailorMadeType">
+    <xs:sequence>
+      <xs:element name="tailorCode" type="tailorCodeType" minOccurs="0"/>
+      <xs:element name="value" type="ST_valueA100" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="transportType">
+    <xs:sequence>
+      <xs:element name="nameMeansOfTransport" type="nameMeansOfTransportType" minOccurs="0"/>
+      <xs:element name="referenceOfAgent" type="referenceOfAgentType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="airfreightType">
+    <xs:sequence>
+      <xs:element name="airwayBill" type="airwayBillType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="customItemsType">
+    <xs:sequence>
+      <xs:element name="manifestNumber" type="manifestNumberType" minOccurs="0"/>
+      <xs:element name="documentCode" type="documentCodeType" minOccurs="0"/>
+      <xs:element name="documentNumber" type="documentNumberType" minOccurs="0"/>
+      <xs:element name="documentIssuingOffice" type="documentIssuingOfficeType" minOccurs="0"/>
+      <xs:element name="countryOfOrigin" type="countryOfOriginType" minOccurs="0"/>
+      <xs:element name="countryOfDespatch" type="countryOfDespatchType" minOccurs="0"/>
+      <xs:element name="countryOfDestination" type="countryOfDestinationType" minOccurs="0"/>
+      <xs:element name="documentIssuingDate" type="documentIssuingDateType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="amountsType">
+    <xs:annotation>
+      <xs:documentation>The amounts can be used for tailor made solutions. Check with PSG consultants when to use.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="amount1" type="amount1Type" minOccurs="0"/>
+      <xs:element name="amount2" type="amount2Type" minOccurs="0"/>
+      <xs:element name="amount3" type="amount3Type" minOccurs="0"/>
+      <xs:element name="amount4" type="amount4Type" minOccurs="0"/>
+      <xs:element name="amount5" type="amount5Type" minOccurs="0"/>
+      <xs:element name="amount6" type="amount6Type" minOccurs="0"/>
+      <xs:element name="amount7" type="amount7Type" minOccurs="0"/>
+      <xs:element name="amount8" type="amount8Type" minOccurs="0"/>
+      <xs:element name="amount9" type="amount9Type" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="codesType">
+    <xs:annotation>
+      <xs:documentation>The codes can be used for tailor made solutions. Check with PSG consultants when to use.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="code1" type="code1Type" minOccurs="0"/>
+      <xs:element name="code2" type="code2Type" minOccurs="0"/>
+      <xs:element name="code3" type="code3Type" minOccurs="0"/>
+      <xs:element name="code4" type="code4Type" minOccurs="0"/>
+      <xs:element name="code5" type="code5Type" minOccurs="0"/>
+      <xs:element name="code6" type="code6Type" minOccurs="0"/>
+      <xs:element name="code7" type="code7Type" minOccurs="0"/>
+      <xs:element name="code8" type="code8Type" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="parametersType">
+    <xs:annotation>
+      <xs:documentation>The parameters can be used for tailor made solutions. Check with PSG consultants when to use.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="parameterYn01" type="parameterYn01Type" minOccurs="0"/>
+      <xs:element name="parameterYn02" type="parameterYn02Type" minOccurs="0"/>
+      <xs:element name="parameterYn03" type="parameterYn03Type" minOccurs="0"/>
+      <xs:element name="parameterYn04" type="parameterYn04Type" minOccurs="0"/>
+      <xs:element name="parameterYn05" type="parameterYn05Type" minOccurs="0"/>
+      <xs:element name="parameterYn06" type="parameterYn06Type" minOccurs="0"/>
+      <xs:element name="parameterYn07" type="parameterYn07Type" minOccurs="0"/>
+      <xs:element name="parameterYn08" type="parameterYn08Type" minOccurs="0"/>
+      <xs:element name="parameterYn09" type="parameterYn09Type" minOccurs="0"/>
+      <xs:element name="parameterYn10" type="parameterYn10Type" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="additionalType">
+    <xs:sequence>
+      <xs:element name="vatIdNumber" type="vatIdNumberType" minOccurs="0"/>
+      <xs:element name="ILNNumber" type="ILNNumberType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addressDetailsType">
+    <xs:sequence>
+      <xs:element name="nameLine1" type="nameLine1Type" minOccurs="0"/>
+      <xs:element name="nameLine2" type="nameLine2Type" minOccurs="0"/>
+      <xs:element name="nameLine3" type="nameLine3Type" minOccurs="0"/>
+      <xs:element name="addressLine1" type="addressLine1Type" minOccurs="0"/>
+      <xs:element name="addressLine2" type="addressLine2Type" minOccurs="0"/>
+      <xs:element name="addressLine3" type="addressLine3Type" minOccurs="0"/>
+      <xs:element name="cityName" type="cityNameType" minOccurs="0"/>
+      <xs:element name="cityName2" type="cityName2Type" minOccurs="0"/>
+      <xs:element name="postalCode" type="postalCodeType" minOccurs="0"/>
+      <xs:element name="countryCode" type="countryCodeType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contactInformationType">
+    <xs:sequence>
+      <xs:element name="languageCode" type="languageCodeType" minOccurs="0"/>
+      <xs:element name="e-mailAddress" type="e-mailAddressType" minOccurs="0"/>
+      <xs:element name="internetAddress" type="internetAddressType" minOccurs="0"/>
+      <xs:element name="contactPerson" type="contactPersonType" minOccurs="0"/>
+      <xs:element name="telephoneNumber" type="telephoneNumberType" minOccurs="0"/>
+      <xs:element name="telefaxNumber" type="telefaxNumberType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="expectedType">
+    <xs:sequence>
+      <xs:element name="quantitySKU" type="quantitySKUType" minOccurs="0"/>
+      <xs:element name="grossWeight" type="grossWeightType" minOccurs="0"/>
+      <xs:element name="netWeight" type="netWeightType" minOccurs="0"/>
+      <xs:element name="quantityPackageCode1" type="quantityPackageCode1Type" minOccurs="0"/>
+      <xs:element name="quantityPackageCode2" type="quantityPackageCode2Type" minOccurs="0"/>
+      <xs:element name="quantityPackageCode3" type="quantityPackageCode3Type" minOccurs="0"/>
+      <xs:element name="quantityPackageCode4" type="quantityPackageCode4Type" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="customLineItemsWms">
+    <xs:sequence>
+      <xs:element name="documentCode" type="documentCodeType" minOccurs="0"/>
+      <xs:element name="documentNumber" type="documentNumberType" minOccurs="0"/>
+      <xs:element name="documentItemNumber" type="documentItemNumberType" minOccurs="0"/>
+      <xs:element name="documentIssuingOffice" type="ST_documentIssuingOfficeA10" minOccurs="0"/>
+      <xs:element name="countryOfOrigin" type="countryOfOriginType" minOccurs="0"/>
+      <xs:element name="countryOfDespatch" type="countryOfDespatchType" minOccurs="0"/>
+      <xs:element name="countryOfDestination" type="countryOfDestinationType" minOccurs="0"/>
+      <xs:element name="deliveryTerm" type="deliveryTermType" minOccurs="0"/>
+      <xs:element name="invoice" type="invoiceType" minOccurs="0"/>
+      <xs:element name="documentIssuingDate" type="documentIssuingDateType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="invoiceInfoType">
+    <xs:sequence>
+      <xs:element name="purchasePrice" type="purchasePriceType" minOccurs="0"/>
+      <xs:element name="currencyCodePurchase" type="currencyCodePurchaseType" minOccurs="0"/>
+      <xs:element name="freightCosts" type="freightCostsType" minOccurs="0"/>
+      <xs:element name="currencyCodeFreight" type="currencyCodeFreightType" minOccurs="0"/>
+      <xs:element name="insuranceCosts" type="insuranceCostsType" minOccurs="0"/>
+      <xs:element name="currencyCodeInsurance" type="currencyCodeInsuranceType" minOccurs="0"/>
+      <xs:element name="otherCosts" type="otherCostsType" minOccurs="0"/>
+      <xs:element name="currencyCodeOtherCosts" type="currencyCodeOtherCostsType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="selectionCodesType">
+    <xs:annotation>
+      <xs:documentation>The selection codes can be used to group a set of orders. For example an container number. Creating bookigs can be done with the given container so creating bookings is easier.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="selectionCode1" type="selectionCode1Type" minOccurs="0"/>
+      <xs:element name="selectionCode2" type="selectionCode2Type" minOccurs="0"/>
+      <xs:element name="selectionCode3" type="selectionCode3Type" minOccurs="0"/>
+      <xs:element name="selectionCode4" type="selectionCode4Type" minOccurs="0"/>
+      <xs:element name="selectionCode5" type="selectionCode5Type" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="extraTransactionDataType">
+    <xs:sequence>
+      <xs:element name="transactionAmount" type="transactionAmountType" minOccurs="0"/>
+      <xs:element name="transactionCurrency" type="transactionCurrencyType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cms xmlns="http://www.kewill.com/logistics/klic/cms" type="tag">
+  <ediCustomerNumber>99999998</ediCustomerNumber>
+  <ediCustomerDepartment/>
+  <ediParm1>5</ediParm1>
+  <ediParm2>i</ediParm2>
+  <ediParm3>d</ediParm3>
+  <transmitter/>
+  <receiver/>
+  <ediReference>EDI reference</ediReference>
+  <referenceIndication>0</referenceIndication>
+  <internalOrderNumber>0</internalOrderNumber>
+  <ediFunction1>9</ediFunction1>
+  <ediCustomerSearchName/>
+  <reason/>
+  <employeesInitials/>
+  <dateTimeZone>1970-01-01T01:00:00Z</dateTimeZone>
+  <order type="tag">
+    <loadingDate>1970-01-01</loadingDate>
+    <loadingTime>08:30:00</loadingTime>
+    <unloadingDate>1970-01-01</unloadingDate>
+    <unloadingTime>10:00:00</unloadingTime>
+    <waybill/>
+    <houseWaybill/>
+    <primaryReference>123ABC</primaryReference>
+    <deliveryTerm>FH</deliveryTerm>
+    <deliveryTermPlace/>
+    <originPlaceCode/>
+    <destinationPlaceCode/>
+    <transport>
+      <nameMeansOfTransport/>
+      <referenceOfAgent/>
+    </transport>
+    <airfreight>
+      <airwayBill>0</airwayBill>
+    </airfreight>
+    <customItems>
+      <manifestNumber/>
+      <documentCode>T-1</documentCode>
+      <documentNumber/>
+      <documentIssuingOffice/>
+      <countryOfOrigin/>
+      <countryOfDespatch/>
+      <countryOfDestination/>
+      <documentIssuingDate>1970-01-01</documentIssuingDate>
+    </customItems>
+    <amounts>
+      <amount1>0</amount1>
+      <amount2>0</amount2>
+      <amount3>0</amount3>
+      <amount4>0</amount4>
+      <amount5>0</amount5>
+      <amount6>0</amount6>
+      <amount7>0</amount7>
+      <amount8>0</amount8>
+      <amount9>0</amount9>
+    </amounts>
+    <codes>
+      <code1>0</code1>
+      <code2>0</code2>
+      <code3>0</code3>
+      <code4>0</code4>
+      <code5>0</code5>
+      <code6>0</code6>
+      <code7>0</code7>
+      <code8>0</code8>
+    </codes>
+    <parameters>
+      <parameterYn01>true</parameterYn01>
+      <parameterYn02>true</parameterYn02>
+      <parameterYn03>true</parameterYn03>
+      <parameterYn04>true</parameterYn04>
+      <parameterYn05>true</parameterYn05>
+      <parameterYn06>true</parameterYn06>
+      <parameterYn07>true</parameterYn07>
+      <parameterYn08>true</parameterYn08>
+      <parameterYn09>true</parameterYn09>
+      <parameterYn10>true</parameterYn10>
+    </parameters>
+    <tailorFiller15/>
+    <extraAmount type="tag">
+      <amountType>0</amountType>
+      <currencyCode>EUR</currencyCode>
+      <amount>0</amount>
+    </extraAmount>
+    <address type="tag">
+      <addressType>0</addressType>
+      <searchName>KEWILL</searchName>
+      <relationNumber>0</relationNumber>
+      <searchString/>
+      <additional>
+        <vatIdNumber>NL123456789.01</vatIdNumber>
+        <ILNNumber/>
+      </additional>
+      <addressDetails>
+        <nameLine1>Kewill BV</nameLine1>
+        <nameLine2>Jason</nameLine2>
+        <nameLine3/>
+        <addressLine1>Stationsweg 45</addressLine1>
+        <addressLine2/>
+        <addressLine3>G40 3RE Glasgow</addressLine3>
+        <cityName>Zwijndrecht</cityName>
+        <cityName2/>
+        <postalCode>3331LR</postalCode>
+        <countryCode>NL</countryCode>
+      </addressDetails>
+      <contactInformation>
+        <languageCode>2</languageCode>
+        <e-mailAddress>employee@examplelogistics.com</e-mailAddress>
+        <internetAddress/>
+        <contactPerson/>
+        <telephoneNumber>+31 (0) 78 6123744</telephoneNumber>
+        <telefaxNumber>+31 (0) 78 6123666</telefaxNumber>
+      </contactInformation>
+      <timeFrames type="tag">
+        <fromTime>00:00:00Z</fromTime>
+        <tillTime>00:00:00Z</tillTime>
+        <tailorFillerA10/>
+      </timeFrames>
+    </address>
+    <address type="tag">
+      <addressType>1</addressType>
+      <searchName>LOADINGEXAMPLE</searchName>
+      <relationNumber>0</relationNumber>
+      <searchString/>
+      <additional>
+        <vatIdNumber/>
+        <ILNNumber/>
+      </additional>
+      <addressDetails>
+        <nameLine1>Schiphol Airport</nameLine1>
+        <nameLine2/>
+        <nameLine3/>
+        <addressLine1>Handelskade 25</addressLine1>
+        <addressLine2>Hall 15</addressLine2>
+        <addressLine3/>
+        <cityName>Amsterdam</cityName>
+        <cityName2/>
+        <postalCode>1118CP</postalCode>
+        <countryCode>NL</countryCode>
+      </addressDetails>
+      <contactInformation>
+        <languageCode>0</languageCode>
+        <e-mailAddress/>
+        <internetAddress/>
+        <contactPerson>Manager in chrg</contactPerson>
+        <telephoneNumber/>
+        <telefaxNumber/>
+      </contactInformation>
+      <timeFrames type="tag">
+        <fromTime>00:00:00Z</fromTime>
+        <tillTime>00:00:00Z</tillTime>
+        <tailorFillerA10/>
+      </timeFrames>
+    </address>
+    <address type="tag">
+      <addressType>2</addressType>
+      <searchName>CONSIGNOREXAMPLE</searchName>
+      <relationNumber>0</relationNumber>
+      <searchString/>
+      <additional>
+        <vatIdNumber/>
+        <ILNNumber/>
+      </additional>
+      <addressDetails>
+        <nameLine1>Sender Company</nameLine1>
+        <nameLine2/>
+        <nameLine3/>
+        <addressLine1>van Goghlaan 1</addressLine1>
+        <addressLine2/>
+        <addressLine3/>
+        <cityName>Eindhoven</cityName>
+        <cityName2/>
+        <postalCode>9711GG</postalCode>
+        <countryCode>NL</countryCode>
+      </addressDetails>
+      <contactInformation>
+        <languageCode>0</languageCode>
+        <e-mailAddress/>
+        <internetAddress/>
+        <contactPerson/>
+        <telephoneNumber/>
+        <telefaxNumber/>
+      </contactInformation>
+      <timeFrames type="tag">
+        <fromTime>00:00:00Z</fromTime>
+        <tillTime>00:00:00Z</tillTime>
+        <tailorFillerA10/>
+      </timeFrames>
+    </address>
+    <address type="tag">
+      <addressType>3</addressType>
+      <searchName>UNLOADINGEXAMPLE</searchName>
+      <relationNumber>0</relationNumber>
+      <searchString/>
+      <additional>
+        <vatIdNumber/>
+        <ILNNumber/>
+      </additional>
+      <addressDetails>
+        <nameLine1>Philips</nameLine1>
+        <nameLine2/>
+        <nameLine3/>
+        <addressLine1>Glaslaan 2</addressLine1>
+        <addressLine2>Door 17</addressLine2>
+        <addressLine3/>
+        <cityName>Groningen</cityName>
+        <cityName2/>
+        <postalCode>5616LW</postalCode>
+        <countryCode>NL</countryCode>
+      </addressDetails>
+      <contactInformation>
+        <languageCode>0</languageCode>
+        <e-mailAddress/>
+        <internetAddress/>
+        <contactPerson>Mr Anybody</contactPerson>
+        <telephoneNumber/>
+        <telefaxNumber/>
+      </contactInformation>
+      <timeFrames type="tag">
+        <fromTime>00:00:00Z</fromTime>
+        <tillTime>00:00:00Z</tillTime>
+        <tailorFillerA10/>
+      </timeFrames>
+    </address>
+    <address type="tag">
+      <addressType>4</addressType>
+      <searchName>CONSIGNEEEXAMPLE</searchName>
+      <relationNumber>0</relationNumber>
+      <searchString/>
+      <additional>
+        <vatIdNumber/>
+        <ILNNumber/>
+      </additional>
+      <addressDetails>
+        <nameLine1>Receiver Company</nameLine1>
+        <nameLine2/>
+        <nameLine3/>
+        <addressLine1>Rembrandtstraat 15</addressLine1>
+        <addressLine2/>
+        <addressLine3/>
+        <cityName>Vlaardingen</cityName>
+        <cityName2/>
+        <postalCode>6016HH</postalCode>
+        <countryCode>NL</countryCode>
+      </addressDetails>
+      <contactInformation>
+        <languageCode>0</languageCode>
+        <e-mailAddress/>
+        <internetAddress/>
+        <contactPerson/>
+        <telephoneNumber/>
+        <telefaxNumber/>
+      </contactInformation>
+      <timeFrames type="tag">
+        <fromTime>00:00:00Z</fromTime>
+        <tillTime>00:00:00Z</tillTime>
+        <tailorFillerA10/>
+      </timeFrames>
+    </address>
+    <extraReference type="tag">
+      <referenceCode>2</referenceCode>
+      <referenceText>External Order</referenceText>
+      <tailorFiller20/>
+    </extraReference>
+    <link type="tag">
+      <linkType>0</linkType>
+      <linkText/>
+      <linkAddress/>
+    </link>
+    <freeText type="tag">
+      <typeOfFreeText>RMS</typeOfFreeText>
+      <text>Please check height of pallets. Maximum height is 2.00 meters.</text>
+    </freeText>
+    <freeText type="tag">
+      <typeOfFreeText>RMS</typeOfFreeText>
+      <text>Repack when higher.</text>
+    </freeText>
+    <invoiceSet type="tag">
+      <set/>
+      <currencyCodePurchase/>
+      <currencyCodeFreight/>
+      <currencyCodeInsurance/>
+      <currencyCodeOtherCosts/>
+      <invoices type="tag">
+        <invoiceReference/>
+        <purchasePrice>0</purchasePrice>
+        <freightCosts>0</freightCosts>
+        <insuranceCosts>0</insuranceCosts>
+        <otherCosts>0</otherCosts>
+      </invoices>
+    </invoiceSet>
+    <articleLine type="tag">
+      <orderType>50</orderType>
+      <articleCode>3232424231</articleCode>
+      <taricCode/>
+      <quantity>3</quantity>
+      <packageCode>ep</packageCode>
+      <expected>
+        <quantitySKU>0</quantitySKU>
+        <grossWeight>0</grossWeight>
+        <netWeight>0</netWeight>
+        <quantityPackageCode1>0</quantityPackageCode1>
+        <quantityPackageCode2>0</quantityPackageCode2>
+        <quantityPackageCode3>0</quantityPackageCode3>
+        <quantityPackageCode4>0</quantityPackageCode4>
+      </expected>
+      <fromCustomsStatus>0</fromCustomsStatus>
+      <customLineItems>
+        <documentCode>T-1</documentCode>
+        <documentNumber/>
+        <documentItemNumber>0</documentItemNumber>
+        <documentIssuingOffice/>
+        <countryOfOrigin>US</countryOfOrigin>
+        <countryOfDespatch/>
+        <countryOfDestination/>
+        <deliveryTerm/>
+        <invoice/>
+        <documentIssuingDate>1970-01-01</documentIssuingDate>
+      </customLineItems>
+      <invoiceInfo>
+        <purchasePrice>0</purchasePrice>
+        <currencyCodePurchase/>
+        <freightCosts>0</freightCosts>
+        <currencyCodeFreight/>
+        <insuranceCosts>0</insuranceCosts>
+        <currencyCodeInsurance/>
+        <otherCosts>0</otherCosts>
+        <currencyCodeOtherCosts/>
+      </invoiceInfo>
+      <orderTypeSpecification>0</orderTypeSpecification>
+      <selectionCodes>
+        <selectionCode1/>
+        <selectionCode2/>
+        <selectionCode3/>
+        <selectionCode4/>
+        <selectionCode5/>
+      </selectionCodes>
+      <extraTransactionData>
+        <transactionAmount>0</transactionAmount>
+        <transactionCurrency/>
+      </extraTransactionData>
+      <tailorFiller20/>
+      <articleLineFreeText type="tag">
+        <articleLineText/>
+      </articleLineFreeText>
+      <lot type="tag">
+        <lotCode/>
+        <lotDate>1970-01-01</lotDate>
+        <lotCodeDateSequence>0</lotCodeDateSequence>
+        <expected>
+          <quantitySKU>0</quantitySKU>
+          <grossWeight>0</grossWeight>
+          <netWeight>0</netWeight>
+          <quantityPackageCode1>0</quantityPackageCode1>
+          <quantityPackageCode2>0</quantityPackageCode2>
+          <quantityPackageCode3>0</quantityPackageCode3>
+          <quantityPackageCode4>0</quantityPackageCode4>
+        </expected>
+        <tailorFiller20/>
+        <lotCharacteristics type="tag">
+          <characteristicsCode>1234</characteristicsCode>
+          <value/>
+          <proRataNumber>0</proRataNumber>
+          <lotCharacteristicsFreeText type="tag">
+            <lotCharacteristicsText/>
+          </lotCharacteristicsFreeText>
+        </lotCharacteristics>
+      </lot>
+      <lotConditions type="tag">
+        <characteristicsCode>1234</characteristicsCode>
+        <operator/>
+        <value/>
+        <lotConditionsDescription type="tag">
+          <lotCharacteristicsText/>
+        </lotConditionsDescription>
+      </lotConditions>
+    </articleLine>
+    <container type="tag">
+      <ID/>
+      <type/>
+      <sealNumber/>
+      <ventilation/>
+      <airHumidity>23.10</airHumidity>
+      <temperatureCelsius>0</temperatureCelsius>
+      <temperatureFahrenheit>0</temperatureFahrenheit>
+      <quantity>12</quantity>
+      <grossWeight>250</grossWeight>
+      <volume>1.000</volume>
+      <goodsValue>25.5</goodsValue>
+    </container>
+    <costAndCharge type="tag">
+      <transactionType>P</transactionType>
+      <addressType>0</addressType>
+      <activityCode>0</activityCode>
+      <currencyCode>EUR</currencyCode>
+      <amount>0</amount>
+      <description>invoice line description</description>
+    </costAndCharge>
+    <tailorMade type="tag">
+      <tailorCode/>
+      <value/>
+    </tailorMade>
+  </order>
+</cms>

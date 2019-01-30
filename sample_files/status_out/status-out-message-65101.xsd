@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.kewill.com/logistics/klic/status-out" elementFormDefault="qualified" targetNamespace="http://www.kewill.com/logistics/klic/status-out">
+  <xs:include schemaLocation="status-out-elements-65101.xsd"/>
+  <xs:element name="status-out" type="status-outType"/>
+  <xs:complexType name="status-outType">
+    <xs:sequence>
+      <xs:element name="ediCustomerNumber" type="ediCustomerNumberType" minOccurs="0"/>
+      <xs:element name="ediCustomerDepartment" type="ediCustomerDepartmentType" minOccurs="0"/>
+      <xs:element name="ediParm1" type="ediParm1Type" minOccurs="0"/>
+      <xs:element name="ediParm2" type="ediParm2Type" minOccurs="0"/>
+      <xs:element name="ediParm3" type="ediParm3Type" minOccurs="0"/>
+      <xs:element name="transmitter" type="transmitterType" minOccurs="0"/>
+      <xs:element name="receiver" type="receiverType" minOccurs="0"/>
+      <xs:element name="ediReference" type="ediReferenceType"/>
+      <xs:element name="referenceIndication" type="referenceIndicationType" minOccurs="0"/>
+      <xs:element name="internalNumber" type="internalNumberType" minOccurs="0"/>
+      <xs:element name="ediFunction1" type="ediFunction1Type"/>
+      <xs:element name="ediCustomerSearchName" type="ediCustomerSearchNameType" minOccurs="0"/>
+      <xs:element name="dateTimeZone" type="dateTimeType" minOccurs="0"/>
+      <xs:element name="fileHeader" type="fileHeaderType"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="fileHeaderType">
+    <xs:sequence>
+      <xs:element name="internalNumber" type="internalNumberType" minOccurs="0"/>
+      <xs:element name="operationalPeriod" type="operationalPeriodType" minOccurs="0"/>
+      <xs:element name="primaryReference" type="primaryReferenceType" minOccurs="0"/>
+      <xs:element name="department" type="departmentType" minOccurs="0"/>
+      <xs:element name="statusCode" type="statusCodeType" minOccurs="0"/>
+      <xs:element name="extraReference" type="extraReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="conNote" type="conNoteType" minOccurs="0"/>
+      <xs:element name="trackingAndTracing" type="trackingAndTracingType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="tailorMade" type="tailorMadeType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="extraReferenceType">
+    <xs:sequence>
+      <xs:element name="referenceCode" type="referenceCodeType" minOccurs="0"/>
+      <xs:element name="referenceText" type="referenceTextType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="conNoteType">
+    <xs:annotation>
+      <xs:documentation>A con note number is shipment note number. This is an unique reference number to identify a shipment. The con note number has a alphanumeric prefix and a numeric part. The numeric part can be the shipment number or a number within a range of numbers received from a carrier.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="prefix" type="prefixType" minOccurs="0"/>
+      <xs:element name="number" type="numberType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="trackingAndTracingType">
+    <xs:sequence>
+      <xs:element name="dateTimeZone" type="dateTimeType" minOccurs="0"/>
+      <xs:element name="destinationCode" type="destinationCodeType" minOccurs="0"/>
+      <xs:element name="code" type="codeType" minOccurs="0"/>
+      <xs:element name="trackingStatus" type="trackingStatusType" minOccurs="0"/>
+      <xs:element name="remark_1" type="remark_1Type" minOccurs="0"/>
+      <xs:element name="remark_2" type="remark_2Type" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="tailorMadeType">
+    <xs:sequence>
+      <xs:element name="tailorCode" type="tailorCodeType" minOccurs="0"/>
+      <xs:element name="value" type="ST_valueA100" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="stringType" fixed="tag" use="required"/>
+  </xs:complexType>
+</xs:schema>

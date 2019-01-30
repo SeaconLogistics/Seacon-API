@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.kewill.com/logistics/klic/status-out" elementFormDefault="qualified" targetNamespace="http://www.kewill.com/logistics/klic/status-out">
+  <xs:annotation>
+    <xs:documentation>Base type and element specifications</xs:documentation>
+  </xs:annotation>
+  <xs:simpleType name="NType">
+    <xs:annotation>
+      <xs:documentation>Non-negative integer value (no fractional digits).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:nonNegativeInteger"/>
+  </xs:simpleType>
+  <xs:simpleType name="AType">
+    <xs:annotation>
+      <xs:documentation>Character string value without control characters.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(\P{Cc})*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DTType">
+    <xs:annotation>
+      <xs:documentation>Date value specified in the following form "YYYY-MM-DDThh:mm:ss".</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+  <xs:simpleType name="stringType">
+    <xs:annotation>
+      <xs:documentation>Character string value</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="AUType">
+    <xs:annotation>
+      <xs:documentation>Character string value (uppercase) without control characters.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="AType">
+      <xs:pattern value="([^a-z])*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ediCustomerNumberType">
+    <xs:annotation>
+      <xs:documentation>The edi settings are located,combined with the other ediParm values, with this number.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="999999999999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ediCustomerDepartmentType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ediParm1Type">
+    <xs:annotation>
+      <xs:documentation>This controls, in combination with ediParm2 and ediParm3, the processing of a file. With these settings Kewill Logistics can determine departments/defaults etc.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="9"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ediParm2Type">
+    <xs:restriction base="AType">
+      <xs:maxLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ediParm3Type">
+    <xs:restriction base="AType">
+      <xs:maxLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="transmitterType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="35"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="receiverType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="35"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ediReferenceType">
+    <xs:annotation>
+      <xs:documentation>This is used to identify edi files.It is used when updates/ delete/ add is send of a previous transmission.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="AType">
+      <xs:maxLength value="35"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="referenceIndicationType">
+    <xs:annotation>
+      <xs:documentation>Indication of the reference which is refered to when using the ediReference field. not set or set with 0  the ediReference is an external EDI reference set with 1  the ediReference points is the con note number set with 9  the ediReference points to a message reference</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NType">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="9"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="internalNumberType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="999999999999999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ediFunction1Type">
+    <xs:annotation>
+      <xs:documentation>1-Remove transmission 2-Items to be added 4-Items to be changed 5-Replace transmission 6-Confirmation transmission 9-Initial transmission</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="AType">
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ediCustomerSearchNameType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="dateTimeType">
+    <xs:annotation>
+      <xs:documentation>This is the actual date/time/zone value.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="DTType"/>
+  </xs:simpleType>
+  <xs:simpleType name="operationalPeriodType">
+    <xs:annotation>
+      <xs:documentation>Period number</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="AType">
+      <xs:maxLength value="7"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="primaryReferenceType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="departmentType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="statusCodeType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="referenceCodeType">
+    <xs:annotation>
+      <xs:documentation>Represents the type of extra reference. For example 2 means: Unloading address reference. Depending on configuration. Configured in program ts2128.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="9999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="referenceTextType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="prefixType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="numberType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="99999999999999999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="destinationCodeType">
+    <xs:restriction base="AUType">
+      <xs:maxLength value="5"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="codeType">
+    <xs:annotation>
+      <xs:documentation>This is the actual code. See ts2116 for possible values.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="AUType">
+      <xs:maxLength value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="trackingStatusType">
+    <xs:restriction base="NType">
+      <xs:maxInclusive value="99"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="remark_1Type">
+    <xs:restriction base="AType">
+      <xs:maxLength value="65"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="remark_2Type">
+    <xs:restriction base="AType">
+      <xs:maxLength value="68"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tailorCodeType">
+    <xs:restriction base="AType">
+      <xs:maxLength value="6"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ST_valueA100">
+    <xs:restriction base="AType">
+      <xs:maxLength value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
