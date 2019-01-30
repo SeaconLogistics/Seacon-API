@@ -44,7 +44,7 @@ File | Description
 -------- | -----------
 [shipment-message-65101.xsd](/sample_files/shipment/shipment-message-65101.xsd)| Main Shipment message schema definition 
 [shipment-message-65101.xsd.html](/sample_files/shipment/shipment-message-65101.xsd.html)| XML Schema Documentation
-[shipment-elements-65101.xsd](/sample_files/shipment/shipment-elements-65101.xsd) |
+[shipment-elements-65101.xsd](/sample_files/shipment/shipment-elements-65101.xsd) | Base type and element specifications
 [shipment-elements-65101.xsd.html](/sample_files/shipment/shipment-elements-65101.xsd.html)| XML Schema Documentation
 [shipment-65101.xml](/sample_files/shipment/shipment-65101.xml) | Example File 1
 [shipment-complete-65101.xml](/sample_files/shipment/shipment-complete-65101.xml) | Example File 2
