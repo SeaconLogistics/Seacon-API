@@ -19,6 +19,23 @@ Seacon prefers to receive and sent xml files for these are the easiest to map to
 It’s also possible to make use of the Seacon standard messages. These are described below.
 
 
+### Connection to Webservice
+
+To test your connection to the Seacon ESB please POST a test file to the following URL.
+
+#### Production server:
+http://webservice.seaconlogistics.com:9000/echo
+
+#### Test server:
+http://webservice.seaconlogistics.com:8000/echo
+
+### Sample Commands
+
+`curl -X POST http://webservice.seaconlogistics.com:8000/echo`
+
+`curl -X POST -H "Content-Type: text/plain" --data "Hallo Seacon, dit is een test" http://webservice.seaconlogistics.com:8000/echo`
+
+
 ## Seacon Standards (to Seacon) 
 ### Shipment xml:
 This is used to interface with the Seacon Transport and Oversea shipments. With this interface (truck) transport, seafreight (im-and export) and airfreight orders can be booked. See attached xsd schemas and two example files.
@@ -26,9 +43,9 @@ This is used to interface with the Seacon Transport and Oversea shipments. With 
 File | Description
 -------- | -----------
 [shipment-message-65101.xsd](/sample_files/shipment/shipment-message-65101.xsd)| 
-[shipment-message-65101.xsd.html](/sample_files/shipment/shipment-message-65101.xsd.html)| 
+[shipment-message-65101.xsd.html](/sample_files/shipment/shipment-message-65101.xsd.html)| XML Schema Documentation
 [shipment-elements-65101.xsd](/sample_files/shipment/shipment-elements-65101.xsd) |
-[shipment-elements-65101.xsd.html](/sample_files/shipment/shipment-elements-65101.xsd.html)| 
+[shipment-elements-65101.xsd.html](/sample_files/shipment/shipment-elements-65101.xsd.html)| XML Schema Documentation
 [shipment-65101.xml](/sample_files/shipment/shipment-65101.xml) | Example File 1
 [shipment-complete-65101.xml](/sample_files/shipment/shipment-complete-65101.xml) | Example File 2
 
