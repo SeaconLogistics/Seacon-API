@@ -49,21 +49,41 @@ File | Description
 #### CMS messages:
  This is used to interface with the Seacon Warehousing orders. With this interface inbounds,  outbounds and mutations can be booked. See attached the xsd schemas and an example file.
 
-     
-
-
+File | Description
+-------- | -----------
+[cms-message-65101.xsd](/sample_files/cms/cms-message-65101.xsd)| Main CMS (#TODO wtf is cms??) message schema definition 
+[cms-message-65101.xsd.html](/sample_files/cms/cms-message-65101.xsd.html)| XML Schema Documentation
+[cms-elements-65101.xsd](/sample_files/cms/cms-elements-65101.xsd) | Base type and element specifications
+[cms-elements-65101.xsd.html](/sample_files/cms/cms-elements-65101.xsd.html)| XML Schema Documentation
+[cms-65101.xml](/sample_files/cms/cms-65101.xml) | Example File 1
+[cms-complete-65101.xml](/sample_files/cms/cms-complete-65101.xml) | Example File 2
 
 
 
 #### Article Masterdata messages:
 This is used to interface with the Seacon article masterdata. With this interface WMS articles can be created in the Seacon systems. See attached xsd schema and example files.
 
+File | Description
+-------- | -----------
+[article-wms-message-65101.xsd](/sample_files/article-wms/article-wms-message-65101.xsd)| Main article message schema definition 
+[article-wms-message-65101.xsd.html](/sample_files/article-wms/article-wms-message-65101.xsd.html)| XML Schema Documentation
+[article-wms-elements-62401.xsd](/sample_files/article-wms/article-wms-elements-62401.xsd) | Base type and element specifications
+[article-wms-elements-62401.xsd.html](/sample_files/article-wms/article-wms-elements-62401.xsd.html)| XML Schema Documentation
+[article-wms-65101.xml](/sample_files/article-wms/article-wms-65101.xml) | Example File 1
+[article-wms-complete-65101.xml](/sample_files/article-wms/article-wms-complete-65101.xml) | Example File 2
 
 
 
 
 #### Status messages:
 This is used to update the Seacon files with tracking and tracing statuses. 
+
+[status-message-65101.xsd](/sample_files/status/status-message-65101.xsd)| Main status message schema definition 
+[status-message-65101.xsd.html](/sample_files/status/status-message-65101.xsd.html)| XML Schema Documentation
+[status-elements-65101.xsd](/sample_files/status/status-elements-65101.xsd) | Base type and element specifications
+[status-elements-65101.xsd.html](/sample_files/status/status-elements-65101.xsd.html)| XML Schema Documentation
+[status-65101.xml](/sample_files/status/status-65101.xml) | Example File 1
+[status-complete-65101.xml](/sample_files/status/status-complete-65101.xml) | Example File 2
 
 
 
