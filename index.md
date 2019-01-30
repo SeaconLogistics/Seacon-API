@@ -19,8 +19,21 @@ Seacon prefers to receive and sent xml files for these are the easiest to map to
 It’s also possible to make use of the Seacon standard messages. These are described below.
 
 
-### Connection to Webservice
+### New Customer Procedure
 
+Seacon follows the following steps when connecting new Customers to our systems.
+
+1. The Integration Engineer will discuss the Customer ans Seacon requirements for data trasnfer.  
+1. ???  
+1. Both the Customer and Seacon firewalls need to be configured to allow the required connections.
+1. once the fireawll changes have been implemented the connection can be tested using the **Seacon Echo Service** 
+1. after the connection has been tested we can test the integration with the webservice, Seacon has a test enviroment available where message may be tested without generating production orders.
+1. after a successfull test the message may be sent to the Production servers.
+
+
+
+
+### Seacon Echo Service
 To test your connection to the Seacon ESB please POST a test file to the following URL.
 
 #### Production server:
