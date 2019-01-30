@@ -98,3 +98,5 @@ Manager IT & Engineering
 T: +31 7 327 5531  
 M: +31 6 20 40 1290  
 E: mvromans@seaconlogistics.com  
+
+![header](/images/footer.jpeg)
