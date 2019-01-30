@@ -1,6 +1,6 @@
 ![header](/images/header.jpeg)
 ## SEACON API Documentation
-#### v20170717
+#### v20190130
 
 ### Introduction
 
@@ -26,10 +26,9 @@ Seacon follows the following steps when connecting new Customers to our systems.
 1. The Integration Engineer will discuss the Customer ans Seacon requirements for data trasnfer.  
 1. ???  
 1. Both the Customer and Seacon firewalls need to be configured to allow the required connections.
-1. once the fireawll changes have been implemented the connection can be tested using the **Seacon Echo Service** 
+1. once the fireawll changes have been implemented the connection can be tested using the [Seacon Echo Service](#seacon-echo-service)
 1. after the connection has been tested we can test the integration with the webservice, Seacon has a test enviroment available where message may be tested without generating production orders.
 1. after a successfull test the message may be sent to the Production servers.
-
 
 
 
