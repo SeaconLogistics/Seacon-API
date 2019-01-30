@@ -28,11 +28,12 @@ Seacon follows the following steps when connecting new Customers to our systems.
 1. Both the Customer and Seacon firewalls need to be configured to allow the required connections.
 1. once the fireawll changes have been implemented the connection can be tested using the [Seacon Echo Service](#seacon-echo-service)
 1. after the connection has been tested we can test the integration with the webservice, Seacon has a test enviroment available where message may be tested without generating production orders.
+1. each message type has a test endpoint where message can be posted to test for xml validity.
 1. after a successfull test the message may be sent to the Production servers.
 
 
-## Seacon Standards (to Seacon) 
-### Shipment xml:
+## Seacon Standards (Customer to Seacon) 
+#### Shipment messages:
 This is used to interface with the Seacon Transport and Oversea shipments. With this interface (truck) transport, seafreight (im-and export) and airfreight orders can be booked. See attached xsd schemas and two example files.
 
 File | Description
@@ -45,7 +46,7 @@ File | Description
 [shipment-complete-65101.xml](/sample_files/shipment/shipment-complete-65101.xml) | Example File 2
 
 
-### CMS xml:
+#### CMS messages:
  This is used to interface with the Seacon Warehousing orders. With this interface inbounds,  outbounds and mutations can be booked. See attached the xsd schemas and an example file.
 
      
@@ -54,46 +55,46 @@ File | Description
 
 
 
-### Article Masterdata:
+#### Article Masterdata messages:
 This is used to interface with the Seacon article masterdata. With this interface WMS articles can be created in the Seacon systems. See attached xsd schema and example files.
 
 
 
 
 
-### Status xml:
+#### Status messages:
 This is used to update the Seacon files with tracking and tracing statuses. 
 
 
 
 
 
-## Seacon standards (from Seacon)
+## Seacon standards (Seacon to Customer)
 
-### Shipment-out xml:
+#### Shipment-out xml:
 This is used to interface (outgoing) with the Seacon Transport and Oversea shipments. With this interface (truck) transport, seafreight (im-and export) and airfreight orders or updated order can be sent to other systems.  See attached xsd schemas and two example files. 
 
 
-### CMS-out xml:
+#### CMS-out xml:
 This is used to interface (outgoing) with the Seacon WMS orders. With this interface warehouse informations about inbound, outbound an mutation orders can be sent to other systems .  See attached xsd schemas and two example files. 
 
 
-### Status out xml:
+#### Status out xml:
 This is used to interface (outgoing) with the Seacon system. With this interface tracking en tracing information and statuses of orders can be sent to other systems. See attached xsd schemas and two example files
 
 
 ### Test information
 
-### Seacon Echo Service
+#### Seacon Echo Service
 To test your connection to the Seacon ESB please POST a test file to the following URL.
 
-#### Production server:
+##### Production server:
 `http://webservice.seaconlogistics.com:9000/echo`
 
-#### Test server:
+##### Test server:
 `http://webservice.seaconlogistics.com:8000/echo`
 
-### Sample Commands
+#### Sample Commands
 
 `curl -X POST http://webservice.seaconlogistics.com:8000/echo`
 
