@@ -36,14 +36,16 @@ Seacon follows the following steps when connecting new Customers to our systems.
 #### Shipment messages:
 This is used to interface with the Seacon Transport and Oversea shipments. With this interface (truck) transport, seafreight (im-and export) and airfreight orders can be booked. See attached xsd schemas and two example files.
 
-File | Description
--------- | -----------
-[shipment-message-65101.xsd](/sample_files/shipment/shipment-message-65101.xsd)| Main Shipment message schema definition 
-[shipment-message-65101.xsd.html](/sample_files/shipment/shipment-message-65101.xsd.html)| XML Schema Documentation
+File | Description|test
+-------- | ----------- | ------
+[shipment-message-65101-flat.xsd](/sample_files/shipment/shipment-message-65101-flat.xsd)| Main **Shipment** message schema definition (flattened)
+[shipment-65101.xml](/sample_files/shipment/shipment-65101.xml) | Example File 1 (minimal)
+[shipment-complete-65101.xml](/sample_files/shipment/shipment-complete-65101.xml) | Example File 2 (complete)
+`http://webservice.seaconlogistics.com:9000/validate?validate=shipment-message-65101-flat` | Seacon Validator
+[shipment-message-65101.xsd](/sample_files/shipment/shipment-message-65101.xsd)| Original Shipment message schema definition 
+[shipment-message-65101.xsd.html](/sample_files/shipment/shipment-message-65101.xsd.html)| Original XML Schema Documentation
 [shipment-elements-65101.xsd](/sample_files/shipment/shipment-elements-65101.xsd) | Base type and element specifications
-[shipment-elements-65101.xsd.html](/sample_files/shipment/shipment-elements-65101.xsd.html)| XML Schema Documentation
-[shipment-65101.xml](/sample_files/shipment/shipment-65101.xml) | Example File 1
-[shipment-complete-65101.xml](/sample_files/shipment/shipment-complete-65101.xml) | Example File 2
+[shipment-elements-65101.xsd.html](/sample_files/shipment/shipment-elements-65101.xsd.html)| XML Schema Documentation 
 
 
 #### CMS messages:
@@ -51,12 +53,14 @@ File | Description
 
 File | Description
 -------- | -----------
-[cms-message-65101.xsd](/sample_files/cms/cms-message-65101.xsd)| Main CMS (#TODO wtf is cms??) message schema definition 
-[cms-message-65101.xsd.html](/sample_files/cms/cms-message-65101.xsd.html)| XML Schema Documentation
+[cms-message-65101-flat.xsd](/sample_files/cms/cms-message-65101-flat.xsd)| Main **CMS** message schema definition (flattened)
+[cms-65101.xml](/sample_files/cms/cms-65101.xml) | Example File 1 (basic)
+[cms-complete-65101.xml](/sample_files/cms/cms-complete-65101.xml) | Example File 2 (complete)
+`http://webservice.seaconlogistics.com:9000/validate?validate=cms-message-65101-flat` | Seacon Validator
+[cms-message-65101.xsd](/sample_files/cms/cms-message-65101.xsd)| Origial CMS (#TODO wtf is cms??) message schema definition 
+[cms-message-65101.xsd.html](/sample_files/cms/cms-message-65101.xsd.html)| Original XML Schema Documentation
 [cms-elements-65101.xsd](/sample_files/cms/cms-elements-65101.xsd) | Base type and element specifications
 [cms-elements-65101.xsd.html](/sample_files/cms/cms-elements-65101.xsd.html)| XML Schema Documentation
-[cms-65101.xml](/sample_files/cms/cms-65101.xml) | Example File 1
-[cms-complete-65101.xml](/sample_files/cms/cms-complete-65101.xml) | Example File 2
 
 
 
@@ -65,12 +69,14 @@ This is used to interface with the Seacon article masterdata. With this interfac
 
 File | Description
 -------- | -----------
-[article-wms-message-65101.xsd](/sample_files/article-wms/article-wms-message-65101.xsd)| Main article message schema definition 
-[article-wms-message-65101.xsd.html](/sample_files/article-wms/article-wms-message-65101.xsd.html)| XML Schema Documentation
+[article-wms-message-65101-flat.xsd](/sample_files/article-wms/article-wms-message-65101-flat.xsd.xsd)| Main **Article** message schema definition (flattened)
+[article-wms-65101.xml](/sample_files/article-wms/article-wms-65101.xml) | Example File 1 (basic)
+[article-wms-complete-65101.xml](/sample_files/article-wms/article-wms-complete-65101.xml) | Example File 2 (complete)
+`http://webservice.seaconlogistics.com:9000/validate?validate=article-wms-message-65101-flat` | Seacon Validator
+[article-wms-message-65101.xsd](/sample_files/article-wms/article-wms-message-65101.xsd)| Original Main article message schema definition 
+[article-wms-message-65101.xsd.html](/sample_files/article-wms/article-wms-message-65101.xsd.html)| Original XML Schema Documentation
 [article-wms-elements-62401.xsd](/sample_files/article-wms/article-wms-elements-62401.xsd) | Base type and element specifications
 [article-wms-elements-62401.xsd.html](/sample_files/article-wms/article-wms-elements-62401.xsd.html)| XML Schema Documentation
-[article-wms-65101.xml](/sample_files/article-wms/article-wms-65101.xml) | Example File 1
-[article-wms-complete-65101.xml](/sample_files/article-wms/article-wms-complete-65101.xml) | Example File 2
 
 
 
@@ -80,17 +86,14 @@ This is used to update the Seacon files with tracking and tracing statuses.
 
 File | Description
 -------- | -----------
-[status-65101-flat.xsd](/sample_files/status/status-65101-flat.xsd)| Single Flattened XSD
-[status-65101.xml](/sample_files/status/status-65101.xml) | Example File 1 (Simple)
+[status-65101-flat.xsd](/sample_files/status/status-65101-flat.xsd)| Main **Status** message schema definition (flattened)
+[status-65101.xml](/sample_files/status/status-65101.xml) | Example File 1 (Basic)
 [status-complete-65101.xml](/sample_files/status/status-complete-65101.xml) | Example File 2 (Complete)
- | 
+`http://webservice.seaconlogistics.com:9000/validate?validate=status-65101-flat` | Seacon Validator
 [status-message-65101.xsd](/sample_files/status/status-message-65101.xsd)| Original status message schema definition 
 [status-message-65101.xsd.html](/sample_files/status/status-message-65101.xsd.html)| XML Schema Documentation
 [status-elements-65101.xsd](/sample_files/status/status-elements-65101.xsd) | Base type and element specifications
 [status-elements-65101.xsd.html](/sample_files/status/status-elements-65101.xsd.html)| XML Schema Documentation
-
-
-
 
 
 ## Seacon standards (Seacon to Customer)
