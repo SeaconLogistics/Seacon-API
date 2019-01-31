@@ -77,6 +77,7 @@ File | Description
 
 #### Status messages:
 This is used to update the Seacon files with tracking and tracing statuses. 
+
 [status-65101-flat.xsd](/sample_files/status/status-65101-flat.xsd)| Single Flattened XSD
 [status-message-65101.xsd](/sample_files/status/status-message-65101.xsd)| Original status message schema definition 
 [status-message-65101.xsd.html](/sample_files/status/status-message-65101.xsd.html)| XML Schema Documentation
@@ -109,6 +110,12 @@ This is used to interface (outgoing) with the Seacon system. With this interface
 `xmllint --noout --schema status-flat.xsd status-complete-65101.xml`  
 
 `xmllint --schema status-flat.xsd status-complete-65101.xml`  
+
+
+### Validate with Seacon Validator
+to Test the valid XML, post the xml to the Seacon Validator
+`http://webservice.seaconlogistics.com:8000/validate?validate=status-65101-flat`
+
 
 
 ### Seacon Echo Service
