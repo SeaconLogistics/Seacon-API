@@ -77,13 +77,13 @@ File | Description
 
 #### Status messages:
 This is used to update the Seacon files with tracking and tracing statuses. 
-
-[status-message-65101.xsd](/sample_files/status/status-message-65101.xsd)| Main status message schema definition 
+[status-65101-flat.xsd](/sample_files/status/status-65101-flat.xsd)| Single Flattened XSD
+[status-message-65101.xsd](/sample_files/status/status-message-65101.xsd)| Original status message schema definition 
 [status-message-65101.xsd.html](/sample_files/status/status-message-65101.xsd.html)| XML Schema Documentation
 [status-elements-65101.xsd](/sample_files/status/status-elements-65101.xsd) | Base type and element specifications
 [status-elements-65101.xsd.html](/sample_files/status/status-elements-65101.xsd.html)| XML Schema Documentation
-[status-65101.xml](/sample_files/status/status-65101.xml) | Example File 1
-[status-complete-65101.xml](/sample_files/status/status-complete-65101.xml) | Example File 2
+[status-65101.xml](/sample_files/status/status-65101.xml) | Example File 1 (Simple)
+[status-complete-65101.xml](/sample_files/status/status-complete-65101.xml) | Example File 2 (Complete)
 
 
 
@@ -103,9 +103,15 @@ This is used to interface (outgoing) with the Seacon WMS orders. With this inter
 This is used to interface (outgoing) with the Seacon system. With this interface tracking en tracing information and statuses of orders can be sent to other systems. See attached xsd schemas and two example files
 
 
-### Test information
+## Test information
 
-#### Seacon Echo Service
+### How to test a XSD
+`xmllint --noout --schema status-flat.xsd status-complete-65101.xml`  
+
+`xmllint --schema status-flat.xsd status-complete-65101.xml`  
+
+
+### Seacon Echo Service
 To test your connection to the Seacon ESB please POST a test file to the following URL.
 
 ##### Production server:
