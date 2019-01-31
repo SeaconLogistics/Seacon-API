@@ -78,11 +78,15 @@ File | Description
 #### Status messages:
 This is used to update the Seacon files with tracking and tracing statuses. 
 
+File | Description
+-------- | -----------
 [status-65101-flat.xsd](/sample_files/status/status-65101-flat.xsd)| Single Flattened XSD
+-------- | -----------
 [status-message-65101.xsd](/sample_files/status/status-message-65101.xsd)| Original status message schema definition 
 [status-message-65101.xsd.html](/sample_files/status/status-message-65101.xsd.html)| XML Schema Documentation
 [status-elements-65101.xsd](/sample_files/status/status-elements-65101.xsd) | Base type and element specifications
 [status-elements-65101.xsd.html](/sample_files/status/status-elements-65101.xsd.html)| XML Schema Documentation
+-------- | -----------
 [status-65101.xml](/sample_files/status/status-65101.xml) | Example File 1 (Simple)
 [status-complete-65101.xml](/sample_files/status/status-complete-65101.xml) | Example File 2 (Complete)
 
