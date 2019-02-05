@@ -36,7 +36,8 @@ Seacon follows the following steps when connecting new Customers to our systems.
 #### Shipment messages:
 This is used to interface with the Seacon Transport and Oversea shipments. With this interface (truck) transport, seafreight (im-and export) and airfreight orders can be booked. See attached xsd schemas and two example files.
 
-Test with: `http://webservice.seaconlogistics.com:9000/validate?validate=shipment-message-65101-flat`
+Test with:  
+`http://webservice.seaconlogistics.com:9000/validate?validate=shipment-message-65101-flat`
 
 File | Description
 -------- | ----------- 
@@ -52,7 +53,8 @@ File | Description
 #### CMS messages:
  This is used to interface with the Seacon Warehousing orders. With this interface inbounds,  outbounds and mutations can be booked. See attached the xsd schemas and an example file.
 
-Test With: `http://webservice.seaconlogistics.com:9000/validate?validate=cms-message-65101-flat`
+Test With:  
+`http://webservice.seaconlogistics.com:9000/validate?validate=cms-message-65101-flat`
 
 File | Description
 -------- | -----------
@@ -69,7 +71,8 @@ File | Description
 #### Article Masterdata messages:
 This is used to interface with the Seacon article masterdata. With this interface WMS articles can be created in the Seacon systems. See attached xsd schema and example files.
 
-Test With: `http://webservice.seaconlogistics.com:9000/validate?validate=article-wms-message-65101-flat` 
+Test With:  
+`http://webservice.seaconlogistics.com:9000/validate?validate=article-wms-message-65101-flat` 
 
 File | Description
 -------- | -----------
@@ -87,7 +90,8 @@ File | Description
 #### Status messages:
 This is used to update the Seacon files with tracking and tracing statuses. 
 
-Test With: `http://webservice.seaconlogistics.com:9000/validate?validate=status-message-65101-flat`
+Test With:  
+`http://webservice.seaconlogistics.com:9000/validate?validate=status-message-65101-flat`
 
 File | Description
 -------- | -----------
@@ -105,6 +109,14 @@ File | Description
 #### Shipment-out xml:
 This is used to interface (outgoing) with the Seacon Transport and Oversea shipments. With this interface (truck) transport, seafreight (im-and export) and airfreight orders or updated order can be sent to other systems.  See attached xsd schemas and two example files. 
 
+File | Description
+-------- | -----------
+[status-message-65101.xsd](/sample_files/status/status-message-65101.xsd)| Original status message schema definition 
+[status-message-65101.xsd.html](/sample_files/status/status-message-65101.xsd.html)| XML Schema Documentation
+[status-elements-65101.xsd](/sample_files/status/status-elements-65101.xsd) | Base type and element specifications
+[status-elements-65101.xsd.html](/sample_files/status/status-elements-65101.xsd.html)| XML Schema Documentation
+[status-65101.xml](/sample_files/status/status-65101.xml) | Example File 1 (Basic)
+[status-complete-65101.xml](/sample_files/status/status-complete-65101.xml) | Example File 2 (Complete)
 
 #### CMS-out xml:
 This is used to interface (outgoing) with the Seacon WMS orders. With this interface warehouse informations about inbound, outbound an mutation orders can be sent to other systems .  See attached xsd schemas and two example files. 
@@ -123,7 +135,7 @@ This is used to interface (outgoing) with the Seacon system. With this interface
 
 
 ### Validate with Seacon Validator
-to Test the valid XML, post the xml to the Seacon Validator
+to Test the valid XML, post the xml to the Seacon Validator  
 `http://webservice.seaconlogistics.com:8000/validate?validate=status-message-65101-flat`
 
 
