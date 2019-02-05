@@ -111,19 +111,37 @@ This is used to interface (outgoing) with the Seacon Transport and Oversea shipm
 
 File | Description
 -------- | -----------
-[status-message-65101.xsd](/sample_files/status/status-message-65101.xsd)| Original status message schema definition 
-[status-message-65101.xsd.html](/sample_files/status/status-message-65101.xsd.html)| XML Schema Documentation
-[status-elements-65101.xsd](/sample_files/status/status-elements-65101.xsd) | Base type and element specifications
-[status-elements-65101.xsd.html](/sample_files/status/status-elements-65101.xsd.html)| XML Schema Documentation
-[status-65101.xml](/sample_files/status/status-65101.xml) | Example File 1 (Basic)
-[status-complete-65101.xml](/sample_files/status/status-complete-65101.xml) | Example File 2 (Complete)
+[shipment-out-message-65101.xsd](/sample_files/shipment-out/shipment-out-message-65101.xsd)| Original status message schema definition 
+[shipment-out-message-65101.xsd.html](/sample_files/shipment-out/shipment-out-message-65101.xsd.html)| XML Schema Documentation
+[shipment-out-elements-65101.xsd](/sample_files/shipment-out/shipment-out-elements-65101.xsd) | Base type and element specifications
+[shipment-out-elements-65101.xsd.html](/sample_files/shipment-out/shipment-out-elements-65101.xsd.html)| XML Schema Documentation
+[shipment-out-65101.xml](/sample_files/shipment-out/shipment-out-65101.xml) | Example File 1 (Basic)
+[shipment-out-complete-65101.xml](/sample_files/shipment-out/shipment-out-complete-65101.xml) | Example File 2 (Complete)
 
 #### CMS-out xml:
 This is used to interface (outgoing) with the Seacon WMS orders. With this interface warehouse informations about inbound, outbound an mutation orders can be sent to other systems .  See attached xsd schemas and two example files. 
 
+File | Description
+-------- | -----------
+[cms-out-message-65101.xsd](/sample_files/cms_out/cms-out-message-65101.xsd)| Original status message schema definition 
+[cms-out-message-65101.xsd.html](/sample_files/cms_out/cms-out-message-65101.html)| XML Schema Documentation
+[cms-out-elements-65101.xsd](/sample_files/cms_out/cms-out-elements-65101.xsd) | Base type and element specifications
+[cms-out-elements-65101.xsd.html](/sample_files/cms_out/cms-out-elements-65101.xsd.html)| XML Schema Documentation
+[cms-out-65101.xml](/sample_files/cms_out/cms-out-65101.xml) | Example File 1 (Basic)
+[cms-out-complete-65101.xml](/sample_files/cms_out/cms-out-complete-65101.xml) | Example File 2 (Complete)
+
 
 #### Status out xml:
 This is used to interface (outgoing) with the Seacon system. With this interface tracking en tracing information and statuses of orders can be sent to other systems. See attached xsd schemas and two example files
+
+File | Description
+-------- | -----------
+[status-out-message-65101.xsd](/sample_files/cms_out/status-out-message-65101.xsd)| Original status message schema definition 
+[status-out-message-65101.xsd.html](/sample_files/cms_out/status-out-message-65101.html)| XML Schema Documentation
+[status-out-elements-65101.xsd](/sample_files/cms_out/status-out-elements-65101.xsd) | Base type and element specifications
+[status-out-elements-65101.xsd.html](/sample_files/cms_out/status-out-elements-65101.xsd.html)| XML Schema Documentation
+[status-out-65101.xml](/sample_files/cms_out/status-out-65101.xml) | Example File 1 (Basic)
+[status-out-complete-65101.xml](/sample_files/cms_out/status-out-complete-65101.xml) | Example File 2 (Complete)
 
 
 ## Test information
