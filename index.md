@@ -6,16 +6,18 @@
 
 Seacon prefers to have direct system-integrations with its customers and suppliers. There are several options how we can do this. This document describes how the integration can be done and what formats are preferred by Seacon. 
 
-### Integration	- Way of data transfer
+### Integration	- Method of data transfer
 
-Seacon uses an ESB for integration systems with each other. In this ESB we can connect to systems in several ways. We can use most common communication types to get and send EDI data to and from our customers. (E.g.  ftp(s) / http(s) / soap / AS2 etc.).  
-Our preferred communication is over http(s). In this way we can have direct communications to the systems with reply if all is okay.  For setting this up we can provide the customer with an endpoint where they can post their messages to. We need some systems information to be able to whitelist the server that is posting (e.g. IP addresses) . 
-The options in how to integrate can be discussed with Seacon IT and the customer or supplier to see what will be the best way for that particular implementation. 
+Seacon uses an [Enterprise Service Bus](https://en.wikipedia.org/wiki/Enterprise_service_bus) (ESB) to integrate systems. Using this ESB we can use various methods of communication. We can use the most common communication methodologies to get and send EDI data between Seacon and it's customers. (E.g.  ftp(s) / http(s) / soap / AS2 etc.).  
+Our preferred communication is POST-ing the data over http(s) through a Firewall-protected connection. Using this method, we can reply to the message as it is being sent that the content was accepted and communication has succeeded.  For setting this up we will provide the customer with an endpoint where they can POST their messages to. as an extra security feature, only pre-specified ip addresses are allowed to post to the endpoint.   
+Exactly which method for communication will be used will be discussed with the customer or supplier on a case-by-case basis.
 
 ### EDI Messages
 
-Seacon can convert from and to several different EDI formats (E.g. EDIFACT / csv / fixed length / xml) . All implementations will require a pre-investigation of how the mapping to the Seacon system will be done and what information the customers or suppliers require.  The time needed for this depends on the complexity of the implementation.
-Seacon prefers to receive and sent xml files for these are the easiest to map to the Seacon standard. 
+Seacon can convert between various EDI formats (E.g. EDIFACT / csv / fixed length / xml). 
+All Implementations require the files supplied by the second party to be mapped to the Seacon standard formats, this includes translations and conversions. (e.g. country codes, date formats, status messages, ect.)
+The time needed for mapping this depends on the complexity of the implementation and any limitations from the connection party's systems.
+Since the ESB internally uses XML files, it is preferred to receive the customer files in that format to lessen the steps needed for translaton.  
 It’s also possible to make use of the Seacon standard messages. These are described below.
 
 
@@ -23,8 +25,7 @@ It’s also possible to make use of the Seacon standard messages. These are desc
 
 Seacon follows the following steps when connecting new Customers to our systems.
 
-1. The Integration Engineer will discuss the Customer ans Seacon requirements for data trasnfer.  
-1. ???  
+1. The Integration Engineer will discuss the Customer ans Seacon requirements for data transfer, focussing on what data is to be exchanged, and what fields are required. (requirements for each type are documented below)
 1. Both the Customer and Seacon firewalls need to be configured to allow the required connections.
 1. once the fireawll changes have been implemented the connection can be tested using the [Seacon Echo Service](#seacon-echo-service)
 1. after the connection has been tested we can test the integration with the webservice, Seacon has a test enviroment available where message may be tested without generating production orders.
@@ -51,7 +52,7 @@ File | Description
 
 
 #### CMS messages:
- This is used to interface with the Seacon Warehousing orders. With this interface inbounds,  outbounds and mutations can be booked. See attached the xsd schemas and an example file.
+ This is used to interface with the Seacon Warehousing orders. With this interface inbounds, outbounds and mutations can be booked. See attached the xsd schemas and an example file.
 
 Test With:  
 `http://webservice.seaconlogistics.com:9000/validate?validate=cms-message-65101-flat`
@@ -88,7 +89,7 @@ File | Description
 
 
 #### Status messages:
-This is used to update the Seacon files with tracking and tracing statuses. 
+This is used to update the Seacon system with tracking and tracing statuses. 
 
 Test With:  
 `http://webservice.seaconlogistics.com:9000/validate?validate=status-message-65101-flat`
@@ -111,7 +112,7 @@ This is used to interface (outgoing) with the Seacon Transport and Oversea shipm
 
 File | Description
 -------- | -----------
-[shipment-out-message-65101.xsd](/sample_files/shipment-out/shipment-out-message-65101.xsd)| Original status message schema definition 
+[shipment-out-message-65101.xsd](/sample_files/shipment-out/shipment-out-message-65101.xsd)| Original **Shipment**-out message schema definition 
 [shipment-out-message-65101.xsd.html](/sample_files/shipment-out/shipment-out-message-65101.xsd.html)| XML Schema Documentation
 [shipment-out-elements-65101.xsd](/sample_files/shipment-out/shipment-out-elements-65101.xsd) | Base type and element specifications
 [shipment-out-elements-65101.xsd.html](/sample_files/shipment-out/shipment-out-elements-65101.xsd.html)| XML Schema Documentation
@@ -123,7 +124,7 @@ This is used to interface (outgoing) with the Seacon WMS orders. With this inter
 
 File | Description
 -------- | -----------
-[cms-out-message-65101.xsd](/sample_files/cms_out/cms-out-message-65101.xsd)| Original status message schema definition 
+[cms-out-message-65101.xsd](/sample_files/cms_out/cms-out-message-65101.xsd)| Original **CMS**-out message schema definition 
 [cms-out-message-65101.xsd.html](/sample_files/cms_out/cms-out-message-65101.html)| XML Schema Documentation
 [cms-out-elements-65101.xsd](/sample_files/cms_out/cms-out-elements-65101.xsd) | Base type and element specifications
 [cms-out-elements-65101.xsd.html](/sample_files/cms_out/cms-out-elements-65101.xsd.html)| XML Schema Documentation
@@ -136,7 +137,7 @@ This is used to interface (outgoing) with the Seacon system. With this interface
 
 File | Description
 -------- | -----------
-[status-out-message-65101.xsd](/sample_files/cms_out/status-out-message-65101.xsd)| Original status message schema definition 
+[status-out-message-65101.xsd](/sample_files/cms_out/status-out-message-65101.xsd)| Original **status**-out message schema definition 
 [status-out-message-65101.xsd.html](/sample_files/cms_out/status-out-message-65101.html)| XML Schema Documentation
 [status-out-elements-65101.xsd](/sample_files/cms_out/status-out-elements-65101.xsd) | Base type and element specifications
 [status-out-elements-65101.xsd.html](/sample_files/cms_out/status-out-elements-65101.xsd.html)| XML Schema Documentation
@@ -172,8 +173,6 @@ To test your connection to the Seacon ESB please POST a test file to the followi
 `curl -X POST http://webservice.seaconlogistics.com:8000/echo`
 
 `curl -X POST -H "Content-Type: text/plain" --data "Hallo Seacon, dit is een test" http://webservice.seaconlogistics.com:8000/echo`
-
-
 
 
 
