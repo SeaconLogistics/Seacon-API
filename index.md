@@ -112,12 +112,12 @@ This is used to interface (outgoing) with the Seacon Transport and Oversea shipm
 
 File | Description
 -------- | -----------
-[shipment-out-message-65101.xsd](/sample_files/shipment-out/shipment-out-message-65101.xsd)| Original **Shipment**-out message schema definition 
-[shipment-out-message-65101.xsd.html](/sample_files/shipment-out/shipment-out-message-65101.xsd.html)| XML Schema Documentation
-[shipment-out-elements-65101.xsd](/sample_files/shipment-out/shipment-out-elements-65101.xsd) | Base type and element specifications
-[shipment-out-elements-65101.xsd.html](/sample_files/shipment-out/shipment-out-elements-65101.xsd.html)| XML Schema Documentation
-[shipment-out-65101.xml](/sample_files/shipment-out/shipment-out-65101.xml) | Example File 1 (Basic)
-[shipment-out-complete-65101.xml](/sample_files/shipment-out/shipment-out-complete-65101.xml) | Example File 2 (Complete)
+[shipment-out-message-65101.xsd](/sample_files/shipment_out/shipment-out-message-65101.xsd)| Original **Shipment**-out message schema definition 
+[shipment-out-message-65101.xsd.html](/sample_files/shipment_out/shipment-out-message-65101.xsd.html)| XML Schema Documentation
+[shipment-out-elements-65101.xsd](/sample_files/shipment_out/shipment-out-elements-65101.xsd) | Base type and element specifications
+[shipment-out-elements-65101.xsd.html](/sample_files/shipment_out/shipment-out-elements-65101.xsd.html)| XML Schema Documentation
+[shipment-out-65101.xml](/sample_files/shipment_out/shipment-out-65101.xml) | Example File 1 (Basic)
+[shipment-out-complete-65101.xml](/sample_files/shipment_out/shipment-out-complete-65101.xml) | Example File 2 (Complete)
 
 #### CMS-out xml:
 This is used to interface (outgoing) with the Seacon WMS orders. With this interface warehouse informations about inbound, outbound an mutation orders can be sent to other systems .  See attached xsd schemas and two example files. 
@@ -137,12 +137,12 @@ This is used to interface (outgoing) with the Seacon system. With this interface
 
 File | Description
 -------- | -----------
-[status-out-message-65101.xsd](/sample_files/cms_out/status-out-message-65101.xsd)| Original **status**-out message schema definition 
-[status-out-message-65101.xsd.html](/sample_files/cms_out/status-out-message-65101.html)| XML Schema Documentation
-[status-out-elements-65101.xsd](/sample_files/cms_out/status-out-elements-65101.xsd) | Base type and element specifications
-[status-out-elements-65101.xsd.html](/sample_files/cms_out/status-out-elements-65101.xsd.html)| XML Schema Documentation
-[status-out-65101.xml](/sample_files/cms_out/status-out-65101.xml) | Example File 1 (Basic)
-[status-out-complete-65101.xml](/sample_files/cms_out/status-out-complete-65101.xml) | Example File 2 (Complete)
+[status-out-message-65101.xsd](/sample_files/status_out/status-out-message-65101.xsd)| Original **status**-out message schema definition 
+[status-out-message-65101.xsd.html](/sample_files/status_out/status-out-message-65101.html)| XML Schema Documentation
+[status-out-elements-65101.xsd](/sample_files/status_out/status-out-elements-65101.xsd) | Base type and element specifications
+[status-out-elements-65101.xsd.html](/sample_files/status_out/status-out-elements-65101.xsd.html)| XML Schema Documentation
+[status-out-65101.xml](/sample_files/status_out/status-out-65101.xml) | Example File 1 (Basic)
+[status-out-complete-65101.xml](/sample_files/status_out/status-out-complete-65101.xml) | Example File 2 (Complete)
 
 
 ## Test information
