@@ -1,4 +1,4 @@
 theme: jekyll-theme-leap-day
 github:
-  is_project_page: false
-  repository_url: http://www.seaconlogistics.com
+  # is_project_page: false
+  # repository_url: http://www.seaconlogistics.com
