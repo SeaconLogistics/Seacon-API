@@ -5,11 +5,11 @@
 | 1 | 		articleCode			 | Customer Article Code  | 				 string with max length of **35** characters											 | Seacon-Example-Article | 
 | 2 | 		internalDescription		 | Description of the Article | 				string with max length of **30** characters											 | Example Article used by Seacon | 
 | 3 | 		eanNumber			 | EAN nummer | 						Positive whole number with a max value of **9999999999999**							 | 8713500010166 | 
-| 4 | 		stockUnit				 | ???lowest stock unit  | 				Stock unit type, possibvle options are **ea** **ct** and **pl**							 | ea | 
-| 5 | 		unitPackageCode1		 | ???next possible package type | 		Stock unit type, possibvle options are **ea** **ct** and **pl**							 | pl | 
-| 6 | 		unitPackageCode2		 | ???next possible package type | 		Stock unit type, possibvle options are **ea** **ct** and **pl**							 | ct | 
-| 7 | 		unitPackageCode3		 | ???????????????? | 				Stock unit type, possibvle options are **ea** **ct** and **pl**							 |   | 
-| 8 | 		unitPackageCode4		 | ???????????????? | 				Stock unit type, possibvle options are **ea** **ct** and **pl**							 |   | 
+| 4 | 		stockUnit				 | ???lowest stock unit  | 				Stock unit type,  possible options are **ea** **ct** and **pl**							 | ea | 
+| 5 | 		unitPackageCode1		 | ???next possible package type | 		Stock unit type,  possible options are **ea** **ct** and **pl**							 | pl | 
+| 6 | 		unitPackageCode2		 | ???next possible package type | 		Stock unit type,  possible options are **ea** **ct** and **pl**							 | ct | 
+| 7 | 		unitPackageCode3		 | ???????????????? | 				Stock unit type,  possible options are **ea** **ct** and **pl**							 |   | 
+| 8 | 		unitPackageCode4		 | ???????????????? | 				Stock unit type,  possible options are **ea** **ct** and **pl**							 |   | 
 | 9 | 		stacking				 | ???????????????? | 				Positive whole number with a max value of **9**										 | 1 | 
 | 10 | 		stackingPackageCode	 | ???????????????? | 				string with max length of **2** characters											 | pl | 
 | 11 | 		nettoWeight			 | Net Article Weight in **Kg** | 			Decimal positive number with a maximum of **999999.9999** with **4** fraction digits			 | 1.000 | 
@@ -51,4 +51,4 @@
 
 ## Sample CSV
 
-[open sample CSV file](./article-min.csv)
+[open sample TAB separated CSV file](./article-min.csv)
