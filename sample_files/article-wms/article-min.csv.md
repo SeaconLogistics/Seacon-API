@@ -23,7 +23,7 @@
 | 19 | 		searchString			 | EAN Code Search name  | 			string with max length of **50** characters											 |  | 
 | 20 | 		packageCode			 | EAN Code package Code  | 			string with max length of **2** characters											 | pc | 
 | 21 | 		eanCode				 | EAN Code   | 						Positive whole number with a max value of **99999999999999**							 | 8713500010166 | 
-|   |  			**packagePattern**		 | We use 3 levels of packageing, ea (eaches),**ct**(cartons) and **pl**(pallets) starting with the smallest level | 
+|   |  			**packagePattern**		 | We use 3 levels of packageing, ea (eaches),**ct**(cartons) and **pl**(pallets) starting with the smallest level | These are not required, but nice to have|
 | 22 | 		packageCode			 | Package code | 						 used for the package code, allowed values are **ea** **ct** **pl**						 | ea | 
 | 23 | 		numberPerUnit			 | how many Articles for this package type  | 	Positive whole number with a max value of **999999**								 | 1 | 
 | 24 | 		grossWeightPerUnit		 | Gross Weight in Kg for this package type  | 	Decimal number between **-9999999999.999** and **9999999999.999** with **3** fraction digits	 | 1.110 | 
@@ -44,7 +44,7 @@
 | 37 | 		length				 | Length in meters for this package type | 	Decimal positive number with a max value of **999.999** and **3** fraction digits in **meters**	 | 0 | 
 | 38 | 		width				 | Width in meters for this package type | 	Decimal positive number with a max value of **999.999** and **3** fraction digits in **meters**	 | 0 | 
 | 39 | 		height				 | Height in meters for this package type | 	Decimal positive number with a max value of **999.999** and **3** fraction digits in **meters**	 | 0 | 
-| |			**customGoodsCode** | 
+| |			**customGoodsCode** | | These are not required, but nice to have|
 | 40 | 		importTaricCode		 | Import Taric code  | 					string with max length of **22**	characters										 | 1905905500701100000000 | 
 | 41 | 		exportTaricCode		 | Export Taric code  | 					string with max length of **22**	characters										 | 1905905500701100000000 | 
 
