@@ -50,5 +50,6 @@
 
 
 ## Sample CSV
+We have prepared a Sample CSV file, please right-click the link below and choose Save Target do download this file.
 
 [open sample TAB separated CSV file](./article-min.csv)
