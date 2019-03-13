@@ -52,4 +52,11 @@
 ## Sample CSV
 We have prepared a Sample CSV file, please right-click the link below and choose Save Target do download this file.
 
-[open sample TAB separated CSV file](./article-min.csv)
+[open sample TAB separated CSV file](./article-min-tab.csv)
+
+[open sample COMMA separated CSV file](./article-min-comma.csv)
+
+[open sample SEMICOLON separated CSV file](./article-min-semicolon.csv)
+
+
+
