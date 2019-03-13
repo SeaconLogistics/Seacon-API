@@ -70,6 +70,8 @@ File | Description
 
 
 #### Article Masterdata messages:
+[If you prefer to use CSV, please go here.](/sample_files/article-wms/article-min.csv.md)
+
 This is used to interface with the Seacon article masterdata. With this interface WMS articles can be created in the Seacon systems. See attached xsd schema and example files.
 
 Test With:  
