@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles xmlns="http://www.kewill.com/logistics/klmd/article-wms" type="tag">
+	<ediCustomerNumber>99999998</ediCustomerNumber>
+	<ediCustomerDepartment>Mw</ediCustomerDepartment>
+	<ediParm1>9</ediParm1>
+	<ediParm2/>
+	<ediParm3/>
+	<ediReference>EDI reference</ediReference>
+	<referenceIndication>0</referenceIndication>
+	<ediFunction1>9</ediFunction1>
+	<article type="tag">
+		<articleCode>wms-example-article</articleCode>
+		<!--klant verplicht-->
+		<searchNameArticle>wmsexample</searchNameArticle>
+		<internalDescription>WMS Example Article</internalDescription>
+		<!--klant verplicht-->
+		<commodityCode>div</commodityCode>
+		<articleGroup>100</articleGroup>
+		<eanNumber>8713500010166</eanNumber>
+		<!--klant-->
+		<codeArticleSet>1</codeArticleSet> 
+		<stockRegistration>
+			<codeStockLevel>0</codeStockLevel>
+			<codeLot>1</codeLot>
+			<codeAutomaticLotDate>1</codeAutomaticLotDate>
+			<codeSerialNumbers>0</codeSerialNumbers>
+		</stockRegistration>
+		<stockLevelControl>
+			<stockUnit>ea</stockUnit>
+			<!--klant verplicht-->
+			<receiptPackageCode>pl</receiptPackageCode>
+			<outboundUnit>pl</outboundUnit>
+			<despatchPackageCode>pl</despatchPackageCode>
+			<unitPackageCode1>pl</unitPackageCode1>
+			<!--klant-->
+			<unitPackageCode2>ct</unitPackageCode2>
+			<!--klant-->
+			<unitPackageCode3/>
+			<!--klant-->
+			<unitPackageCode4/>
+			<!--klant-->
+			<stacking>1</stacking>
+			<!--klant-->
+			<stackingPackageCode>pl</stackingPackageCode>
+			<!--klant-->
+			<stackingPalletUnit>false</stackingPalletUnit>
+			<volumePackageCode>bx</volumePackageCode>
+			<stackablePalletOutgoing>false</stackablePalletOutgoing>
+		</stockLevelControl>
+		<nettoWeight>1.000</nettoWeight>
+		<!--klant-->
+		<branchSpecifics type="tag">
+			<branchCode>31</branchCode>
+			<minimumStock>0</minimumStock>
+			<maximumStock>0</maximumStock>
+			<sellingPrice>10.00</sellingPrice>
+			<lotReservation>true</lotReservation>
+			<palletReservation>true</palletReservation>
+			<finalPalletFull>false</finalPalletFull>
+			<replenishment>
+				<transferUnit>pl</transferUnit>
+				<minimumAmount>0</minimumAmount>
+				<minimumPercentage>0.00</minimumPercentage>
+				<quantityToTransfer>1</quantityToTransfer>
+				<packageCode>pl</packageCode>
+				<reversedPickPercenatage>0.00</reversedPickPercenatage>
+			</replenishment>
+			<despatchPackageCode>pl</despatchPackageCode>
+			<TMSArticle>false</TMSArticle>
+			<RFSwitchLot>false</RFSwitchLot>
+			<RFSwitchPallet>true</RFSwitchPallet>
+			<tailorFiller10>Tailor10</tailorFiller10>
+		</branchSpecifics>
+		<descriptionPerLanguage type="tag">
+			<!--klant-->
+			<languageCode>1</languageCode>
+			<descriptionPart1>WMS voorbeeld artikel omschrij</descriptionPart1>
+			<descriptionPart2>ving in het Nederlands</descriptionPart2>
+			<descriptionPart3>descriptionPart3</descriptionPart3>
+			<descriptionPart4>descriptionPart4</descriptionPart4>
+		</descriptionPerLanguage>
+		<eanCodes type="tag">
+			<!--klant-->
+			<supplierEanCode>
+				<supplierSearchName>STANDAARD</supplierSearchName>
+				<relationNumber>0</relationNumber>
+				<searchString/>
+			</supplierEanCode>
+			<packageCode>pc</packageCode>
+			<eanCode>8713500010166</eanCode>
+		</eanCodes>
+		<articleCharacteristic type="tag">
+			<characteristicsCode>2</characteristicsCode>
+			<orderType>0</orderType>
+			<operator>=</operator>
+			<value>2L</value>
+			<numberPositiveOrNegative>0</numberPositiveOrNegative>
+		</articleCharacteristic>
+		<packagePattern type="tag">
+			<!--klant nth hele segment-->
+			<packageCode>ea</packageCode>
+			<!--klant-->
+			<numberPerUnit>1</numberPerUnit>
+			<!--klant hoeveel kleinste eenheid in package-->
+			<grossWeightPerUnit>1.110</grossWeightPerUnit>
+			<!--klant-->
+			<length>0</length>
+			<!--klant meters-->
+			<width>0</width>
+			<!--klant-->
+			<height>0</height>
+			<!--klant-->
+			<calculationPackageCode>pl</calculationPackageCode>
+			<palletRegistration>false</palletRegistration>
+		</packagePattern>
+		<packagePattern type="tag">
+			<!--klant-->
+			<packageCode>ct</packageCode>
+			<!--klant-->
+			<numberPerUnit>12</numberPerUnit>
+			<!--klant hoeveel kleinste eenheid in package-->
+			<grossWeightPerUnit>1.110</grossWeightPerUnit>
+			<!--klant-->
+			<length>0</length>
+			<!--klant meters-->
+			<width>0</width>
+			<!--klant-->
+			<height>0</height>
+			<!--klant-->
+			<calculationPackageCode>pl</calculationPackageCode>
+			<palletRegistration>false</palletRegistration>
+		</packagePattern>
+		<packagePattern type="tag">
+			<!--klant-->
+			<packageCode>pl</packageCode>
+			<!--klant-->
+			<numberPerUnit>120</numberPerUnit>
+			<!--klant hoeveel kleinste eenheid in package-->
+			<grossWeightPerUnit>1.110</grossWeightPerUnit>
+			<!--klant-->
+			<length>0</length>
+			<!--klant meters-->
+			<width>0</width>
+			<!--klant-->
+			<height>0</height>
+			<!--klant-->
+			<calculationPackageCode>pl</calculationPackageCode>
+			<palletRegistration>true</palletRegistration>
+		</packagePattern>
+		<customGoodsCode type="tag">
+			<countryCode>NL</countryCode>
+			<fromDate>2014-04-01</fromDate>
+			<importTaricCode>1905905500701100000000</importTaricCode>
+			<!--klant bth-->
+			<exportTaricCode>1905905500701100000000</exportTaricCode>
+			<!--klant nth-->
+		</customGoodsCode>
+	</article>
+</articles>
