@@ -62,7 +62,7 @@ File | Description
 [cms-message-65101-flat.xsd](/sample_files/cms/cms-message-65101-flat.xsd)| Main **CMS** message schema definition (flattened)
 [cms-65101.xml](/sample_files/cms/cms-65101.xml) | Example File 1 (basic)
 [cms-complete-65101.xml](/sample_files/cms/cms-complete-65101.xml) | Example File 2 (complete)
-[cms-message-65101.xsd](/sample_files/cms/cms-message-65101.xsd)| Origial CMS (#TODO wtf is cms??) message schema definition 
+[cms-message-65101.xsd](/sample_files/cms/cms-message-65101.xsd)| Origial CMS (#TODO what is cms??) message schema definition 
 [cms-message-65101.xsd.html](/sample_files/cms/cms-message-65101.xsd.html)| Original XML Schema Documentation
 [cms-elements-65101.xsd](/sample_files/cms/cms-elements-65101.xsd) | Base type and element specifications
 [cms-elements-65101.xsd.html](/sample_files/cms/cms-elements-65101.xsd.html)| XML Schema Documentation
