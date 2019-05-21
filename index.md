@@ -43,7 +43,9 @@ Test with:
 File | Description
 -------- | ----------- 
 [shipment-message-65101-flat.xsd](/sample_files/shipment/shipment-message-65101-flat.xsd)| Main **Shipment** message schema definition (flattened)
-[shipment-65101.xml](/sample_files/shipment/shipment-65101.xml) | Example File 1 (minimal)
+[]() | Basic Example File for a FTL Order
+[]() | Basic Example File for a LTL Order
+[]() | Basic Example File
 [shipment-complete-65101.xml](/sample_files/shipment/shipment-complete-65101.xml) | Example File 2 (complete)
 [shipment-message-65101.xsd](/sample_files/shipment/shipment-message-65101.xsd)| Original Shipment message schema definition 
 [shipment-message-65101.xsd.html](/sample_files/shipment/shipment-message-65101.xsd.html)| Original XML Schema Documentation
@@ -60,6 +62,9 @@ Test With:
 File | Description
 -------- | -----------
 [cms-message-65101-flat.xsd](/sample_files/cms/cms-message-65101-flat.xsd)| Main **CMS** message schema definition (flattened)
+[]() | Basic Example File for one article
+[]() | Basic Example File for multiple articles
+[]() | Basic Example File for ...
 [cms-65101.xml](/sample_files/cms/cms-65101.xml) | Example File 1 (basic)
 [cms-complete-65101.xml](/sample_files/cms/cms-complete-65101.xml) | Example File 2 (complete)
 [cms-message-65101.xsd](/sample_files/cms/cms-message-65101.xsd)| Origial CMS (#TODO what is cms??) message schema definition 
@@ -80,6 +85,9 @@ Test With:
 File | Description
 -------- | -----------
 [article-wms-message-65101-flat.xsd](/sample_files/article-wms/article-wms-message-65101-flat.xsd.xsd)| Main **Article** message schema definition (flattened)
+[]() | Basic Example File for ...
+[]() | Basic Example File for ...
+[]() | Basic Example File for ...
 [article-wms-65101.xml](/sample_files/article-wms/article-wms-65101.xml) | Example File 1 (basic)
 [article-wms-complete-65101.xml](/sample_files/article-wms/article-wms-complete-65101.xml) | Example File 2 (complete)
 [article-wms-message-65101.xsd](/sample_files/article-wms/article-wms-message-65101.xsd)| Original Main article message schema definition 
@@ -99,6 +107,9 @@ Test With:
 File | Description
 -------- | -----------
 [status-message-65101-flat.xsd](/sample_files/status/status-message-65101-flat.xsd)| Main **Status** message schema definition (flattened)
+[]() | Basic Example File for ...
+[]() | Basic Example File for ...
+[]() | Basic Example File for ...
 [status-65101.xml](/sample_files/status/status-65101.xml) | Example File 1 (Basic)
 [status-complete-65101.xml](/sample_files/status/status-complete-65101.xml) | Example File 2 (Complete)
 [status-message-65101.xsd](/sample_files/status/status-message-65101.xsd)| Original status message schema definition 
