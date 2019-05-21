@@ -4,7 +4,7 @@
 
 ### Introduction
 
-Seacon prefers to have direct system-integrations with its customers and suppliers. There are several options how we can do this. This document describes how the integration can be done and what formats are preferred by Seacon. 
+Seacon prefers to have direct system-integrations with its customers and suppliers. There are several options how we can do this. This document describes the technical details on how the integration can be done and what formats are preferred by Seacon. 
 
 ### Integration	- Method of data transfer
 
@@ -107,7 +107,7 @@ File | Description
 [status-elements-65101.xsd.html](/sample_files/status/status-elements-65101.xsd.html)| XML Schema Documentation
 
 
-## Seacon standards (Seacon to Customer)
+## Seacon standards (Seacon to Customer/Supplier)
 
 #### Shipment-out xml:
 This is used to interface (outgoing) with the Seacon Transport and Oversea shipments. With this interface (truck) transport, seafreight (im-and export) and airfreight orders or updated order can be sent to other systems.  See attached xsd schemas and two example files. 
