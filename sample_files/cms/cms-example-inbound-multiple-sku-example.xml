@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cms xmlns="http://www.kewill.com/logistics/klic/cms"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          type="tag">
+   <ediCustomerNumber>13771</ediCustomerNumber>
+   <ediCustomerDepartment>inb8</ediCustomerDepartment>
+   <ediParm1>5</ediParm1>
+   <ediParm2>8</ediParm2>
+   <ediParm3>d</ediParm3>
+   <ediReference>UNIQUE_REF123</ediReference>
+   <ediFunction1>9</ediFunction1>
+   <order type="tag">
+      <loadingDate>2019-04-23</loadingDate>
+      <primaryReference>UNIQUE_REF123</primaryReference>
+      <address type="tag">
+         <addressType>2</addressType>
+         <addressDetails>
+            <nameLine1>Consignor_Name1</nameLine1>
+            <nameLine2/>
+            <nameLine3/>
+            <addressLine1>Address_1</addressLine1>
+            <addressLine2/>
+            <addressLine3/>
+            <cityName>City</cityName>
+            <cityName2/>
+            <postalCode>4438AE</postalCode>
+            <countryCode>NL</countryCode>
+         </addressDetails>
+         <contactInformation>
+            <e-mailAddress>mail@mail.nl</e-mailAddress>
+            <telephoneNumber>1234</telephoneNumber>
+         </contactInformation>
+      </address>
+      <address type="tag">
+          <addressType>3</addressType>
+         <addressDetails>
+            <nameLine1>Unloading_Name1</nameLine1>
+            <nameLine2/>
+            <nameLine3/>
+            <addressLine1>Address_1</addressLine1>
+            <addressLine2/>
+            <addressLine3/>
+            <cityName>City</cityName>
+            <cityName2/>
+            <postalCode>4438AE</postalCode>
+            <countryCode>NL</countryCode>
+         </addressDetails>
+         <contactInformation>
+            <e-mailAddress>mail@mail.nl</e-mailAddress>
+            <telephoneNumber>1234</telephoneNumber>
+         </contactInformation>
+      </address>
+          <extraReference type="tag">
+         <referenceCode>91</referenceCode>
+         <referenceText>Additinal reference</referenceText>
+      </extraReference>
+      <freeText type="tag">
+         <typeOfFreeText>TX1</typeOfFreeText>
+      </freeText>
+      <freeText type="tag">
+         <typeOfFreeText>TX1</typeOfFreeText>
+      </freeText>
+      <freeText type="tag">
+         <typeOfFreeText>TX1</typeOfFreeText>
+      </freeText>
+      <articleLine type="tag">
+         <orderType>50</orderType>
+         <articleCode>SKU_1</articleCode>
+         <quantity>1</quantity>
+         <articleLineFreeText type="tag">
+            <articleLineText>Exta texts in Article</articleLineText>
+         </articleLineFreeText>
+         <articleLineFreeText type="tag"/>
+      </articleLine>
+      <articleLine type="tag">
+         <orderType>50</orderType>
+         <articleCode>SKU_2</articleCode>
+         <quantity>2</quantity>
+         <articleLineFreeText type="tag">
+            <articleLineText>Extra texts in Article</articleLineText>
+         </articleLineFreeText>
+         <articleLineFreeText type="tag"/>
+      </articleLine>
+   </order>
+</cms>

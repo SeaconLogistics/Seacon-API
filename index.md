@@ -62,6 +62,7 @@ Test With:
 File | Description
 -------- | -----------
 [cms-message-65101-flat.xsd](/sample_files/cms/cms-message-65101-flat.xsd)| Main **CMS** message schema definition (flattened)
+[cms-example-inbound-multiple-sku-example.xml](/sample_files/cms/cms-example-inbound-multiple-sku-example.xml) | Basic Example File for inbound order with multiple SKU
 []() | Basic Example File for one article
 []() | Basic Example File for multiple articles
 []() | Basic Example File for ...
@@ -138,6 +139,7 @@ This is used to interface (outgoing) with the Seacon WMS orders. With this inter
 File | Description
 -------- | -----------
 [cms-out-message-65101.xsd](/sample_files/cms_out/cms-out-message-65101.xsd)| Original **CMS**-out message schema definition 
+[cms-example-outbound-multiple-sku-example.xml](/sample_files/cms_out/cms-example-outbound-multiple-sku-example.xml) | Basic Example File for Outgoing order with multiple SKU
 [cms-out-message-65101.xsd.html](/sample_files/cms_out/cms-out-message-65101.html)| XML Schema Documentation
 [cms-out-elements-65101.xsd](/sample_files/cms_out/cms-out-elements-65101.xsd) | Base type and element specifications
 [cms-out-elements-65101.xsd.html](/sample_files/cms_out/cms-out-elements-65101.xsd.html)| XML Schema Documentation
