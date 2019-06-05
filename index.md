@@ -108,9 +108,10 @@ Test With:
 File | Description
 -------- | -----------
 [status-message-65101-flat.xsd](/sample_files/status/status-message-65101-flat.xsd)| Main **Status** message schema definition (flattened)
-[]() | Basic Example File for **Conform Delivery** confirmation
-[]() | Basic Example File for ...
-[]() | Basic Example File for ...
+[status-message-example-carrier-confirmation.xml](/sample_files/status/status-message-example-carrier-confirmation.xml) | Basic Example File for **Carrier Confirmation** Order received message
+[status-message-example-carrier-loaded.xml](/sample_files/status/status-message-example-carrier-loaded.xml) | Basic Example File for **Loaded** Basic loaded at pickup location message
+[status-message-example-carrier-delivered.xml](/sample_files/status/status-message-example-carrier-delivered.xml) | Basic Example File for **Conform Delivery** confirmation of normal delivery
+[status-message-example-carrier-nonconformity.xml](/sample_files/status/status-message-example-carrier-nonconformity.xml) | Basic Example File for **non-conform end of shipment** unable to complete shipment as requested message see below for list of non-conformity codes
 [status-65101.xml](/sample_files/status/status-65101.xml) | Example File 1 (Basic)
 [status-complete-65101.xml](/sample_files/status/status-complete-65101.xml) | Example File 2 (Complete)
 [status-message-65101.xsd](/sample_files/status/status-message-65101.xsd)| Original status message schema definition
@@ -118,6 +119,9 @@ File | Description
 [status-elements-65101.xsd](/sample_files/status/status-elements-65101.xsd) | Base type and element specifications
 [status-elements-65101.xsd.html](/sample_files/status/status-elements-65101.xsd.html)| XML Schema Documentation
 
+##### Non-conformity codes
+Code | Description
+NCL_005 | Gremlins stole the Cargo #TODO set actual description
 
 ## Seacon standards (Seacon to Customer/Supplier)
 

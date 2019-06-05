@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<status xmlns="http://www.kewill.com/logistics/klic/status"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="tag"> <!-- Meta-data is needed just like it is -->
+	<ediCustomerNumber>999999998</ediCustomerNumber> <!-- Fixed Seacon data !don't change -->
+	<ediParm1>4</ediParm1> <!-- Fixed Seacon data !don't change -->
+	<ediParm2>s</ediParm2> <!-- Fixed Seacon data !don't change -->
+	<ediParm3>d</ediParm3> <!-- Fixed Seacon data !don't change -->
+	<transmitter>EDI</transmitter> <!-- Fixed Seacon data !don't change -->
+	<ediReference/> <!-- Unused required element-->
+	<referenceIndication>0</referenceIndication> <!-- Fixed Seacon data !don't change -->
+	<internalNumber>3847859</internalNumber> <!-- Seacon reference number/internal shipmentnumber -->
+	<ediFunction1>2</ediFunction1> <!-- Fixed Seacon data !don't change -->
+	<employeesInitials>EDI</employeesInitials> <!-- Fixed Seacon data !don't change -->
+	<fileHeader type="tag"> <!-- needs the type="tag" meta-data -->
+		<trackingAndTracing type="tag"> <!-- needs the type="tag" meta-data -->
+			<dateTimeZone>2019-03-26T16:58:41</dateTimeZone> <!-- Date and time of status change (in this format) -->
+			<code>NCL_005</code> <!-- Seacon Standard Status code see the added list -->
+			<remark_1>Gremlins stole the shipment</remark_1> <!-- Please add the reason for the discrepancy -->
+			<remark_2 /> <!-- extended information to this status -->
+		</trackingAndTracing>
+	</fileHeader>
+</status>
