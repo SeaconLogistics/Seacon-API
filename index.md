@@ -126,11 +126,14 @@ NCL_005 | Gremlins stole the Cargo #TODO set actual description
 ## Seacon standards (Seacon to Customer/Supplier)
 
 #### Shipment-out xml:
-This is used to interface (outgoing) with the Seacon Transport and Oversea shipments. With this interface (truck) transport, seafreight (im-and export) and airfreight orders or updated order can be sent to other systems.  See attached xsd schemas and two example files.
+This is used to interface (outgoing) with the Seacon Transport and Oversea shipments. With this interface (truck) transport, sea freight (import and export) and air freight orders or updated order can be sent to other systems.  See attached xsd schemas and two example files.
 
 File | Description
 -------- | -----------
 [shipment-out-message-65101.xsd](/sample_files/shipment_out/shipment-out-message-65101.xsd)| Original **Shipment-out** message schema definition
+[shipment-out-example-LTL-one-goodsline.xml](/sample_files/shipment_out/shipment-out-example-LTL-one-goodsline.xml) | Basic Example File for a **LTL** shipment for 3 Euro Pallets from NL to CH
+[]() | Basic Example File for ...
+[]() | Basic Example File for ...
 [shipment-out-message-65101.xsd.html](/sample_files/shipment_out/shipment-out-message-65101.xsd.html)| XML Schema Documentation
 [shipment-out-elements-65101.xsd](/sample_files/shipment_out/shipment-out-elements-65101.xsd) | Base type and element specifications
 [shipment-out-elements-65101.xsd.html](/sample_files/shipment_out/shipment-out-elements-65101.xsd.html)| XML Schema Documentation
@@ -138,11 +141,14 @@ File | Description
 [shipment-out-complete-65101.xml](/sample_files/shipment_out/shipment-out-complete-65101.xml) | Example File 2 (Complete)
 
 #### CMS-out xml:
-This is used to interface (outgoing) with the Seacon WMS orders. With this interface warehouse informations about inbound, outbound an mutation orders can be sent to other systems .  See attached xsd schemas and two example files.
+This is used to interface (outgoing) with the Seacon WMS orders. With this interface warehouse information about inbound, outbound an mutation orders can be sent to other systems .  See attached xsd schemas and two example files.
 
 File | Description
 -------- | -----------
 [cms-out-message-65101.xsd](/sample_files/cms_out/cms-out-message-65101.xsd)| Original **CMS**-out message schema definition
+[]() | Basic Example File for ...
+[]() | Basic Example File for ...
+[]() | Basic Example File for ...
 [cms-example-outbound-multiple-sku-example.xml](/sample_files/cms_out/cms-example-outbound-multiple-sku-example.xml) | Basic Example File for **Outgoing** order with multiple **SKU**
 [cms-out-message-65101.xsd.html](/sample_files/cms_out/cms-out-message-65101.html)| XML Schema Documentation
 [cms-out-elements-65101.xsd](/sample_files/cms_out/cms-out-elements-65101.xsd) | Base type and element specifications
@@ -157,6 +163,9 @@ This is used to interface (outgoing) with the Seacon system. With this interface
 File | Description
 -------- | -----------
 [status-out-message-65101.xsd](/sample_files/status_out/status-out-message-65101.xsd)| Original **status**-out message schema definition
+[]() | Basic Example File for ...
+[]() | Basic Example File for ...
+[]() | Basic Example File for ...
 [status-out-message-65101.xsd.html](/sample_files/status_out/status-out-message-65101.html)| XML Schema Documentation
 [status-out-elements-65101.xsd](/sample_files/status_out/status-out-elements-65101.xsd) | Base type and element specifications
 [status-out-elements-65101.xsd.html](/sample_files/status_out/status-out-elements-65101.xsd.html)| XML Schema Documentation
@@ -179,7 +188,7 @@ to Test the valid XML, post the xml to the Seacon Validator
 
 
 ### Seacon Echo Service
-To test your connection to the Seacon ESB please POST a test file to the following URL.
+To test your connection to the Seacon Webservice please POST a test file to the following URL.
 
 ##### Production server:
 `http://webservice.seaconlogistics.com:9000/echo`
@@ -200,7 +209,7 @@ With every customer or supplier we will discuss what will be the most efficient 
 
 
 ## Contact information
-More information about EDI integrations you can contact:  
+For more information about EDI integrations you can contact:  
 Seacon Logistics B.V.  - IT Department  
 Mark Vromans   
 Manager IT & Engineering  
