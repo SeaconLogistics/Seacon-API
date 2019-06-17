@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shipment-out xmlns="http://www.kewill.com/logistics/klic/shipment-out" type="tag">
+  <ediCustomerNumber>0000000</ediCustomerNumber>
+  <ediCustomerDepartment>dept</ediCustomerDepartment>
+  <ediParm1>5</ediParm1>
+  <ediParm2>5</ediParm2>
+  <ediParm3>d</ediParm3>
+  <transmitter>SEACON</transmitter>
+  <receiver>RELATION</receiver>
+  <ediReference>SEACONREF</ediReference>
+  <ediFunction1>6</ediFunction1>
+  <employeeInitials>EDI</employeeInitials>
+  <file type="tag">
+    <loadingDate>2019-06-16</loadingDate>
+    <loadingTime>00:00:00</loadingTime>
+    <unloadingDate>2019-06-20</unloadingDate>
+    <unloadingTime>00:00:00</unloadingTime>
+    <primaryReference>REFNR</primaryReference>
+    <address type="tag">
+      <addressType>1</addressType>
+      <searchName>PICKNAME</searchName>
+      <relationNumber>scnrelnr</relationNumber>
+      <addressDetails>
+        <nameLine1>Loa Ding</nameLine1>
+        <addressLine1>LoadStreet 5</addressLine1>
+        <addressLine2>Extra address line</addressLine2>
+        <cityName>Loadcity</cityName>
+        <postalCode>xxxxxx</postalCode>
+        <countryCode>NL</countryCode>
+      </addressDetails>
+      <timeFrames type="tag">
+        <fromTime>00:00:00</fromTime>
+        <tillTime>00:00:00</tillTime>
+      </timeFrames>
+    </address>
+    <address type="tag">
+      <addressType>3</addressType>
+      <searchName>DELNAME</searchName>
+      <relationNumber>scnrelnr</relationNumber>
+      <addressDetails>
+        <nameLine1>Del Ivery</nameLine1>
+        <addressLine1>ReceiverStreet 145</addressLine1>
+        <addressLine2>Extra address line</addressLine2>
+        <cityName>Delcity</cityName>
+        <postalCode>xxxxxx</postalCode>
+        <countryCode>CH</countryCode>
+      </addressDetails>
+      <timeFrames type="tag">
+        <fromTime>00:00:00</fromTime>
+        <tillTime>00:00:00</tillTime>
+      </timeFrames>
+    </address>
+    <extraReference type="tag">
+      <referenceCode>1</referenceCode>
+      <referenceText>masterbatch</referenceText>
+    </extraReference>
+    <freeText type="tag">
+      <typeOfFreeText>FREE</typeOfFreeText>
+      <text>free text field for information</text>
+    </freeText>
+    <goodsLine type="tag"> <!-- #TODO add better example, Kai guessed some values below -->
+      <quantity>    3</quantity>
+      <packageCode>ep</packageCode> <!-- #TODO add list ep = europallet, bp = blockpallet -->
+      <grossWeight>        120.000 </grossWeight>
+      <cubicMeters>  3.000</cubicMeters>
+      <loadingMeters>  1.200</loadingMeters>
+      <marksAndNumbers type="tag">
+        <marksAndNumber></marksAndNumber>
+      </marksAndNumbers>
+      <goodsDescription type="tag">
+        <description>Goods description</description>
+      </goodsDescription>
+    </goodsLine>
+  </file>
+</shipment-out>
