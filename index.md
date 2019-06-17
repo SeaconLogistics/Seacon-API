@@ -121,7 +121,9 @@ File | Description
 [status-elements-65101.xsd.html](/sample_files/status/status-elements-65101.xsd.html)| XML Schema Documentation
 
 ##### Non-conformity codes
+
 Code | Description
+-------- | -----------
 NCL_005 | Gremlins stole the Cargo #TODO set actual description
 
 ## Seacon standards (Seacon to Customer/Supplier)
