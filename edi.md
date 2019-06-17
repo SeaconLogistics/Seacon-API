@@ -1,3 +1,6 @@
+![header](/images/header.jpeg)
+## SEACON EDI Documentation
+
 ### New Customer Procedure
 
 Seacon follows the following steps when connecting up new EDI connections with you, our customer or supplier.
