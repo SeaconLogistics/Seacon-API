@@ -194,10 +194,21 @@ to Test the valid XML, post the xml to the Seacon Validator
 To test your connection to the Seacon Webservice please POST a test file to the following URL.
 
 ##### Production server:
+
+###### Unencrypted traffic
 `http://webservice.seaconlogistics.com:9000/echo`
 
+###### Encrypted traffic
+`https://webservice.seaconlogistics.com:9001/secho/`
+
+
 ##### Test server:
+
+###### Unencrypted traffic
 `http://webservice.seaconlogistics.com:8000/echo`
+
+###### Encrypted traffic
+`https://webservice.seaconlogistics.com:8001/secho/`
 
 #### Sample Commands
 
